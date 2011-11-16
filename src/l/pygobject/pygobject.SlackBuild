@@ -65,7 +65,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG
 cd $TMP 
 rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$PKGNAM-$VERSION.tar.bz2 || exit 1
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* || exit 1
 cd $PKGNAM-$VERSION || exit 1
 chown -R root:root .
 find . \
@@ -80,7 +80,6 @@ CFLAGS="$SLKCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --enable-introspection \
   --build=$ARCH-slackware-linux \
   || exit 1
 

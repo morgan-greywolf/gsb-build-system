@@ -61,7 +61,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKGDEST
 cd $TMP &&
 rm -rf $PKGNAM &&
-tar xvf $CWD/pa_stable_candidate_${VERSION}.tgz &&
+tar xvf $CWD/pa_stable_${VERSION}.tgz &&
 cd $PKGNAM || exit 1
 
 chown -R root:root .
