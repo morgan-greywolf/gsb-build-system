@@ -1,0 +1,24 @@
+#pcm.!default {
+	## Default sound type
+	# type hw  # Set default ALSA device to hardware
+	# type pulse  # Set default device to pulseaudio server
+   	#
+	#
+    	# If defaults.namehint.showall is set to off in alsa.conf, then this is
+    	# necessary to make this pcm show up in the list returned by
+    	# snd_device_name_hint or aplay -L
+	#hint.description "Default Audio Device"
+#}
+#ctl.!default {
+	## Default sound type
+	# type hw           
+	# type pulse  # Set default device to pulseaudio server
+#}
+
+pcm.pulse {
+    type pulse
+}
+
+ctl.pulse {
+    type pulse
+}
