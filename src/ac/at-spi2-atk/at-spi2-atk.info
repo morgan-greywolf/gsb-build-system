@@ -1,8 +1,8 @@
 PKGNAME="at-spi2-atk"
-VERSION="2.2.1"
+VERSION="2.2.2"
 HOMEPAGE="http://live.gnome.org/Accessibility/"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
 DOWNLOAD="${GNOME_SERVER}/at-spi2-atk/2.2/at-spi2-atk-${VERSION}.tar.xz"
-MD5SUM="19646097aca25a9c1b8ba7ab8d172916"
+MD5SUM="a7f2a4becd9f74ef4ac5f35407cb3fbd"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

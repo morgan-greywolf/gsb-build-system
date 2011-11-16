@@ -1,11 +1,10 @@
 accerciser:SKP
-at-spi:SKP
-dasher:SKP
+at-spi2-atk:SKP
+at-spi2-core:SKP
+caribou:SKP
 espeak:SKP
-gail:SKP
-gnome-mag:SKP
-gnome-speech:SKP
-gok:SKP
-libgail-gnome:SKP
+liblouis:SKP
 mousetweaks:SKP
 orca:SKP
+pyatspi:SKP
+speech-dispatcher:SKP
