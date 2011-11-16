@@ -64,9 +64,6 @@ rm -rf $PKGNAM-$VERSION &&
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
 cd $PKGNAM-$VERSION || exit 1
 
-# Patch configure to use libunique-3.0
-zcat $CWD/libgda.libunique3.diff.gz | patch -p1 || exit 1
-
 chown -R root:root .
 find . \
   \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
@@ -80,13 +77,12 @@ CFLAGS="$GSBCFLAGS" \
   --mandir=/usr/man \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --build=$ARCH-$DISTRO-linux \
-  --disable-static \
   --with-ui \
-  --with-unique \
   --with-libsoup \
   --with-gnome-keyring \
   --enable-system-sqlite \
-  --enable-introspection=yes \
+  --enable-introspection=no \
+  --disable-static \
   || exit 1
 
 make ${NUMJOBS} || make || exit 1
