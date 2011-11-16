@@ -1,3 +1,32 @@
+Wed Nov 16 19:54:18 GMT 2011
+ac/at-spi2-core-2.2.2-i486-1gsb.txz: Upgraded.
+ac/at-spi2-atk-2.2.2-i486-1gsb.txz: Upgraded.
+ap/file-roller-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gedit-3.2.3-i486-1gsb.txz: Upgraded.
+ap/gnome-user-docs-3.2.2-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.6-i486-1gsb.txz: Upgraded.
+n/telepathy-gabble-0.12.7-i486-1gsb.txz: Upgraded.
+l/libevent-2.0.15-i486-1gsb.txz: Upgraded.
+n/transmission-2.42-i486-1gsb.txz: Upgraded.
+n/epiphany-extensions-3.2.0-i486-1gsb.txz: Upgraded.
+n/vino-3.2.2-i486-1gsb.txz: Upgraded.
+n/vinagre-3.2.2-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-1gsb.txz: Upgraded.
+n/balsa-2.4.10-i486-1gsb.txz: Upgraded.
+l/portaudio-v19_20110326-i486-1gsb.txz: Upgraded.
+ac/espeak-1.45.05-i486-1gsb.txz: Upgraded.
+ac/pyatspi-2.2.1-i486-1gsb.txz: Upgraded.
+ac/orca-3.2.2-i486-1gsb.txz: Upgraded.
+ac/mousetweaks-3.2.1-i486-1gsb.txz: Upgraded.
+ac/accerciser-3.2.1-i486-1gsb.txz: Upgraded.
+ac/caribou-0.4.1-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.11-i486-1gsb.txz: Upgraded.
+d/gdl-3.2.0-i486-1gsb.txz: Upgraded.
+d/anjuta-3.2.1-i486-1gsb.txz: Upgraded.
+d/devhelp-3.2.0-i486-1gsb.txz: Upgraded.
+extra/gst-plugins-ugly-0.10.18-i486-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.1-i486-1gsb.txz: Upgraded.
++--------------------------+
 Mon Nov 14 18:14:45 GMT 2011
 l/glib2-2.30.2-i486-1gsb.txz: Upgraded.
 l/gtk+3-3.2.2-i486-1gsb.txz: Upgraded.
@@ -10,6 +39,16 @@ n/NetworkManager-0.9.2.0-i486-1gsb.txz: Upgraded.
 n/NetworkManager-pptp-0.9.2.0-i486-1gsb.txz: Upgraded.
 ap/cheese-3.2.2-i486-1gsb.txz: Upgraded.
 l/gtkhtml-4.2.2-i486-1gsb.txz: Upgraded.
+n/evolution-3.2.2-i486-1gsb.txz: Upgraded.
+n/empathy-3.2.2-i486-1gsb.txz: Upgraded.
+n/network-manager-applet-0.9.2.0-i486-1gsb.txz: Upgraded.
+ap/seahorse-3.2.2-i486-1gsb.txz: Upgraded.
+n/gtk-vnc-0.4.4-i486-1gsb.txz: Upgraded.
+go/gnumeric-1.10.17-i486-1gsb.txz: Upgraded.
+t/gnome-themes-standard-3.2.1-i486-1gsb.txz: Upgraded.
+ap/eog-3.2.2-i486-1gsb.txz: Upgraded.
+l/pygobject-3.0.2-i486-1gsb.txz: Upgraded.
+ap/gnome-games-3.2.1-i486-1gsb.txz: Upgraded.
 +--------------------------+
 Wed Nov 11 10:24:21 GMT 2011
 l/libicu-4.8.1-i486-1gsb.txz: Rebuilt.
