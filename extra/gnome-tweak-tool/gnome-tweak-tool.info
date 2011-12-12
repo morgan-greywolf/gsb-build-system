@@ -1,8 +1,8 @@
 PKGNAME="gnome-tweak-tool"
-VERSION="3.2.1"
+VERSION="3.2.2"
 HOMEPAGE="http://live.gnome.org/GnomeTweakTool"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
 DOWNLOAD="${GNOME_SERVER}/gnome-tweak-tool/3.2/gnome-tweak-tool-${VERSION}.tar.xz"
-MD5SUM="c2dc63760a43a65d95deae3713e34246"
+MD5SUM="68680e451298b74684e3beb5c4169aaf"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"
