@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 VERSION=3.2.1
-BUILD=1
+BUILD=2
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j10 "}
@@ -78,7 +78,6 @@ CFLAGS="$GSBCFLAGS" \
   --mandir=/usr/man \
   --build=$ARCH-$DISTRO-linux \
   --disable-static \
-  --enable-introspection=no \
   --disable-eds \
   --disable-network-manager \
   || exit 1

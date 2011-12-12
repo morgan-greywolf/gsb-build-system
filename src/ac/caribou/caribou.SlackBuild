@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 VERSION=0.4.1
-BUILD=1
+BUILD=3
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j10 "}
@@ -74,12 +74,17 @@ find . \
 CFLAGS="$GSBCFLAGS" \
 ./configure --prefix=/usr \
   --mandir=/usr/man \
+  --sysconfdir=/etc \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --build=$ARCH-$DISTRO-linux \
   || exit 1
 
 make ${NUMJOBS} || make || exit 1
 make DESTDIR=$PKG install || exit 1
+
+# Preserve gnome settings
+mkdir -p $PKG/etc/gnome &&
+ mv $PKG/etc/xdg $PKG/etc/gnome || exit 1
 
 find $PKG | xargs file | egrep "executable|shared object" | grep "ELF" | \
   cut -d: -f1 | xargs strip --strip-unneeded 2>/dev/null
@@ -107,6 +112,7 @@ chown -R root:root $PKG/usr/doc/$PKGNAM-$VERSION
 
 mkdir -p $PKG/install 
 cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/slack-required > $PKG/install/slack-required
 
 cd $PKG
 makepkg -p -l y -c n $PKGDEST/${PKGNAM}-${VERSION}-$ARCH-${BUILD}${TAG}.txz

@@ -24,8 +24,8 @@
 
 
 PKGNAM=pygobject
-VERSION=3.0.2
-BUILD=1
+VERSION=2.28.6
+BUILD=2
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j7 "}
@@ -74,6 +74,10 @@ find . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
+# upstream fix for GI_INFO_TYPE_ERROR_DOMAIN obsoletion
+# commit e5df32ffbf37481dbb6a70c4d4e7b7b9778c5549
+zcat $CWD/pygobject.gi.error.references.diff.gz | patch -p1
+
 CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
@@ -81,6 +85,8 @@ CFLAGS="$SLKCFLAGS" \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --build=$ARCH-slackware-linux \
+  --without-ffi \
+  --disable-introspection \
   || exit 1
 
 make $NUMJOBS || make || exit 1
@@ -107,7 +113,6 @@ fi
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/slack-required > $PKG/install/slack-required
 
 cd $PKG
 /sbin/makepkg -l y -c n $PKGDEST/$PKGNAM-$VERSION-$ARCH-$BUILD${TAG}.txz

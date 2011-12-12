@@ -61,7 +61,7 @@ d/vala
 a/dconf
 a/gtk-engines
 t/gnome-themes
-#t/gnome-themes-standard
+t/gnome-themes-standard
 t/gnome-icon-theme
 t/gnome-icon-theme-symbolic
 t/gnome-icon-theme-extras
@@ -97,6 +97,8 @@ ap/gnome-video-effects
 l/libpeas
 ap/eog
 l/mx
+l/gstreamer
+l/gst-plugins-base
 a/gnome-control-center
 ap/cheese
 ap/gnome-power-manager
@@ -113,7 +115,6 @@ d/pangomm
 d/atkmm
 d/gtkmm
 ap/gnome-system-monitor
-#l/gtkimageview -- Disabled for now without gtk+3 port: http://mail.gnome.org/archives/evolution-hackers/2011-January/msg00052.html
 l/libunique
 n/evolution
 n/evolution-exchange
@@ -130,8 +131,6 @@ n/mobile-broadband-provider-info
 n/ModemManager
 ap/seahorse
 ap/seahorse-sharing
-l/gstreamer
-l/gst-plugins-base
 l/gst-plugins-good
 ap/totem-pl-parser
 l/rdflib
@@ -171,6 +170,9 @@ ap/gnome-utils
 n/gtk-vnc
 ap/eog-plugins
 go/gnumeric
+l/pygobject
+l/pygobject3
+#l/pygtk
 ap/gnome-games
 go/tracker
 # Telepathy backend
@@ -196,7 +198,6 @@ l/libdotconf
 l/portaudio
 ac/espeak
 ac/speech-dispatcher
-l/pygobject
 ac/pyatspi
 l/pyxdg
 ac/liblouis
@@ -204,35 +205,28 @@ ac/orca
 ac/mousetweaks
 ac/accerciser
 ac/caribou
-#n/liferea
 # Development
-#d/gdl
 go/libgda
+d/gdl
 d/anjuta
 d/bluefish
 d/devhelp
-#d/gitg
 # Build packages in extra/
-####extra/easytag
-####extra/gst-plugins-ugly
-####extra/gnome-tweak-tool
-#extra/sylpheed
-#extra/pyalsaaudio
-#extra/volti
-####l/libgnomecanvas
-####ap/gdm
-# Mono applications
-#m/libgdiplus
-#m/mono
+extra/alsa-plugins
+extra/easytag
+extra/gst-plugins-ugly
+extra/gnome-tweak-tool
+#
+# Package built manually: extra/libnotify-solibs
+#
+# GDM
+l/libgnomecanvas
+ap/gdm
 # Pasture packages in pasture/
-####pasture/gnome-mime-data
-####pasture/gnome-vfs
-####pasture/libbonobo
-####pasture/libgnome
-#pasture/libbonoboui
-#pasture/libgnomeui
+pasture/gnome-mime-data
+pasture/gnome-vfs
+pasture/libbonobo
+pasture/libgnome
 # Testing packages in testing/
-#testing/slim
-####testing/rhythmbox
 # Installation package
 a/gsb-desktop

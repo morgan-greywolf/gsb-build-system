@@ -43,6 +43,7 @@ gnome-power-manager
 gnome-python
 gnome-session
 gnome-settings-daemon
+caribou
 gnome-shell
 gnome-terminal
 gnome-themes

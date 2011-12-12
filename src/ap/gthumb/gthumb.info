@@ -1,5 +1,5 @@
 PKGNAME="gthumb"
-VERSION="2.14.0"
+VERSION="2.14.1"
 HOMEPAGE="http://gthumb.sourceforge.net/"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
 DOWNLOAD="${GNOME_SERVER}/gthumb/2.14/gthumb-${VERSION}.tar.xz"

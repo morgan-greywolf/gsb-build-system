@@ -1,8 +1,8 @@
 PKGNAME="gconf-editor"
-VERSION="3.0.0"
+VERSION="3.0.1"
 HOMEPAGE="http://projects.gnome.org/gconf/"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/gconf-editor/3.0/gconf-editor-${VERSION}.tar.bz2"
-MD5SUM="535eb5986d83c17a91891da26f6b78f3"
+DOWNLOAD="${GNOME_SERVER}/gconf-editor/3.0/gconf-editor-${VERSION}.tar.xz"
+MD5SUM="107b8fa250da4ae2de197a1381a099f5"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"
