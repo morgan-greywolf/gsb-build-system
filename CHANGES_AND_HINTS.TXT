@@ -36,15 +36,25 @@ Otherwise, the official Slackware package will outweigh some GNOME SlackBuild
 required package and they may not be installed.  
 
 
-*** PACKAGE ADDITIONS SINCE 3.2.0 for Slackware 13.37 ***
+*** PACKAGE ADDITIONS SINCE 3.0.0 for Slackware 13.37 ***
+
+l/cogl
+l/json-c
+l/colord
+l/lcms2
+l/pango: This replaces a standard Slackware pacakge.
+l/gdk-pixbuf: This replaces a standard Slackware pacakge.
+l/atk: This replaces a standard Slackware pacakge.
+l/liboauth
+l/p11-kit
+l/pygobject3
 
 *** PACKAGE REMOVALS SINCE 3.0.0 for Slackware 13.37 ***
 
-d/gdl.
-n/liferea.
+d/gdl
+n/liferea
 m/*.  The mono (m/) set has been removed.  It is just too slow,
 clumsy and ugly to keep maintaining.
-
 
 *** OTHER NOTABLE CHANGES AND HINTS ***
 
