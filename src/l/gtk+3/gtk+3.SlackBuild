@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 VERSION=3.2.2
-BUILD=1
+BUILD=2
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j10 "}
@@ -63,6 +63,14 @@ cd $TMP &&
 rm -rf $PKGNAM-$VERSION &&
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
 cd $PKGNAM-$VERSION || exit 1
+
+#https://bugzilla.gnome.org/show_bug.cgi?id=646461
+#https://bugzilla.gnome.org/show_bug.cgi?id=664137
+zcat $CWD/aca43f43be3886f1a0befda0178ebb94ea2cf7b1.diff.gz | patch -p1
+#https://bugzilla.gnome.org/show_bug.cgi?id=664537
+zcat $CWD/b38f5ffa52c3a07f40061479bb1a5f023e0faa67.diff.gz | patch -p1
+#https://bugzilla.gnome.org/show_bug.cgi?id=664456
+zcat $CWD/cf028a1f7b81927b3571d500e36896f9cc8e1fb1.diff.gz | patch -p1
 
 # Use /etc/gtk-3.0/$ARCH-slackware-linux instead of /etc/gtk-3.0/
 #sed -i "s/GTK_SYSCONFDIR, \\\"gtk-3\\.0\\\"/GTK_SYSCONFDIR, \\\"gtk-3\\.0\\\", HOST/g" ./gtk/gtkrc.c
