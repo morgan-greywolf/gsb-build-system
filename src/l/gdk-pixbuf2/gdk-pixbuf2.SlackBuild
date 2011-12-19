@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PKGNAM=gdk-pixbuf
-VERSION=2.24.0
+VERSION=2.24.1
 BUILD=1
 
 # Automatically determine the architecture we're building on:

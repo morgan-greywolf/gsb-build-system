@@ -1,3 +1,24 @@
+Mon Dec 19 14:49:28 GMT 2011
+n/folks-0.6.6-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.8-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.12-i486-1gsb.txz: Upgraded.
+l/gdk-pixbuf2-2.24.1-i486-1gsb.txz: Upgraded.
+l/gtk+3-3.2.3-i486-1gsb.txz: Upgraded.
+l/vte3-0.30.1-i486-2gsb.txz: Patched.
+ A bug with vte and gtk+3 caused virtual meta masks to work incorrectly,
+ leading to difficulties using applications like Midnight Commander in vte
+ based terminals.  This patch should fix that problem.
+   https://bugzilla.gnome.org/show_bug.cgi?id=663779
++--------------------------+
+Mon Dec 12 20:07:55 GMT 2011
+ap/gedit-3.2.4-i486-1gsb.txz: Upgraded.
+l/pygobject3-3.0.3-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-2gsb.txz: Repackaged.
+  Updated the slapt-getrc file to point to slackware-13.37, not
+  slackware-current. 
+a/gsb-desktop-3.2.2-i486-3gsb.txz: Rebuilt.
+  Added colord to slack-required.
++--------------------------+
 Sun Dec  4 18:50:11 GMT 2011
 n/folks-0.6.5-i486-1gsb.txz: Upgraded.
 l/pygobject-2.28.6-i486-2gsb.txz: Reconfigured.
