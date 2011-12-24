@@ -1,3 +1,13 @@
+Sat Dec 24 17:22:22 GMT 2011
+l/gdk-pixbuf2-2.24.1-i486-2gsb.txz: Reconfigured.
+  Added --with-x11 to keep binary compatibility.  Thanks to Chris Vine for the
+  fix and Joshua Crawford for reporting the bug. 
+a/evolution-data-server-3.2.2-i486-1gsb.txz: Patched.
+  https://bugzilla.gnome.org/show_bug.cgi?id=665253 
+  https://bugzilla.gnome.org/show_bug.cgi?id=662068 
+  Thanks for Mario for reporting the bug.  This package will likely be
+  upgraded to 3.2.3 soon upstream.
++--------------------------+
 Mon Dec 19 14:49:28 GMT 2011
 n/folks-0.6.6-i486-1gsb.txz: Upgraded.
 go/tracker-0.12.8-i486-1gsb.txz: Upgraded.
