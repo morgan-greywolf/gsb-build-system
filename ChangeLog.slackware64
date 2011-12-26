@@ -1,3 +1,143 @@
+Mon Dec 26 19:19:36 GMT 2011
+a/gnome-control-center-3.2.2-x86_64-2gsb.txz: Rebuilt.
+  Missing the network-applet.  Thanks to JDifool for reporting the missing
+  applet.
++--------------------------+
+Mon Dec 26 17:42:54 GMT 2011
+l/gdk-pixbuf2-2.24.1-x86_64-2gsb.txz: Reconfigured.
+  Added --with-x11 to keep binary compatibility.  Thanks to Chris Vine for the
+  fix and Joshua Crawford for reporting the bug. 
+a/evolution-data-server-3.2.2-x86_64-1gsb.txz: Patched.
+  https://bugzilla.gnome.org/show_bug.cgi?id=665253 
+  https://bugzilla.gnome.org/show_bug.cgi?id=662068 
+  Thanks for Mario for reporting the bug.  This package will likely be
+  upgraded to 3.2.3 soon upstream.
++--------------------------+
+Mon Dec 19 14:49:28 GMT 2011
+n/folks-0.6.6-x86_64-1gsb.txz: Upgraded.
+go/tracker-0.12.8-x86_64-1gsb.txz: Upgraded.
+go/libgda-4.2.12-x86_64-1gsb.txz: Upgraded.
+l/gdk-pixbuf2-2.24.1-x86_64-1gsb.txz: Upgraded.
+l/gtk+3-3.2.3-x86_64-1gsb.txz: Upgraded.
+l/vte3-0.30.1-x86_64-2gsb.txz: Patched.
+ A bug with vte and gtk+3 caused virtual meta masks to work incorrectly,
+ leading to difficulties using applications like Midnight Commander in vte
+ based terminals.  This patch should fix that problem.
+   https://bugzilla.gnome.org/show_bug.cgi?id=663779
++--------------------------+
+Mon Dec 12 20:07:55 GMT 2011
+ap/gedit-3.2.4-x86_64-1gsb.txz: Upgraded.
+l/pygobject3-3.0.3-x86_64-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-x86_64-2gsb.txz: Repackaged.
+  Updated the slapt-getrc file to point to slackware-13.37, not
+  slackware-current. 
+a/gsb-desktop-3.2.2-x86_64-3gsb.txz: Rebuilt.
+  Added colord to slack-required.
++--------------------------+
+Sun Dec  4 18:50:11 GMT 2011
+n/folks-0.6.5-x86_64-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-x86_64-2gsb.txz: Reconfigured.
+  Disabled introspection in pygobject-2.28.6.
+l/pygobject3-3.0.1-x86_64-1gsb.txz: Added.
+  Added newer 3.x series of pygobject which support introspection.
+ap/gnome-games-3.2.1-x86_64-2gsb.txz: Rebuilt.
+ac/caribou-0.4.1-x86_64-3gsb.txz: Rebuilt.
+  Added pyatspi to slack-required.
++--------------------------+
+Sun Nov 27 15:41:43 GMT 2011
+extra/gst-plugins-ugly-0.10.18-x86_64-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-x86_64-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.2-x86_64-1gsb.txz: Upgraded.
++--------------------------+
+Thu Nov 24 17:06:53 GMT 2011
+ac/at-spi2-core-2.2.3-x86_64-1gsb.txz: Upgraded.
+n/telepathy-logger-0.2.12-x86_64-1gsb.txz: Upgraded.
+ad/gconf-editor-3.0.1-x86_64-1gsb.txz: Upgraded.
+ap/eog-plugins-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/papyon-0.5.6-x86_64-1gsb.txz: Upgraded.
+d/anjuta-3.2.2-x86_64-1gsb.txz: Upgraded.
++--------------------------+
+Wed Nov 16 22:46:15 GMT 2011
+ap/seahorse-sharing-3.2.1-x86_64-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+l/colord-0.1.13-x86_64-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+ac/orca-3.2.2-x86_64-1gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
+ac/caribou-0.4.1-x86_64-2gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
++--------------------------+
+Wed Nov 16 19:54:18 GMT 2011
+ac/at-spi2-core-2.2.2-x86_64-1gsb.txz: Upgraded.
+ac/at-spi2-atk-2.2.2-x86_64-1gsb.txz: Upgraded.
+ap/file-roller-3.2.2-x86_64-1gsb.txz: Upgraded.
+ap/gedit-3.2.3-x86_64-1gsb.txz: Upgraded.
+ap/gnome-user-docs-3.2.2-x86_64-1gsb.txz: Upgraded.
+go/tracker-0.12.6-x86_64-1gsb.txz: Upgraded.
+n/telepathy-gabble-0.12.7-x86_64-1gsb.txz: Upgraded.
+l/libevent-2.0.15-x86_64-1gsb.txz: Upgraded.
+n/transmission-2.42-x86_64-1gsb.txz: Upgraded.
+n/epiphany-extensions-3.2.0-x86_64-1gsb.txz: Upgraded.
+n/vino-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/vinagre-3.2.2-x86_64-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-x86_64-1gsb.txz: Upgraded.
+n/balsa-2.4.10-x86_64-1gsb.txz: Upgraded.
+l/portaudio-v19_20110326-x86_64-1gsb.txz: Upgraded.
+ac/espeak-1.45.05-x86_64-1gsb.txz: Upgraded.
+ac/pyatspi-2.2.1-x86_64-1gsb.txz: Upgraded.
+ac/orca-3.2.2-x86_64-1gsb.txz: Upgraded.
+ac/mousetweaks-3.2.1-x86_64-1gsb.txz: Upgraded.
+ac/accerciser-3.2.1-x86_64-1gsb.txz: Upgraded.
+ac/caribou-0.4.1-x86_64-1gsb.txz: Upgraded.
+go/libgda-4.2.11-x86_64-1gsb.txz: Upgraded.
+d/gdl-3.2.0-x86_64-1gsb.txz: Upgraded.
+d/anjuta-3.2.1-x86_64-1gsb.txz: Upgraded.
+d/devhelp-3.2.0-x86_64-1gsb.txz: Upgraded.
+extra/gst-plugins-ugly-0.10.18-x86_64-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.1-x86_64-1gsb.txz: Upgraded.
++--------------------------+
+Mon Nov 14 18:14:45 GMT 2011
+l/glib2-2.30.2-x86_64-1gsb.txz: Upgraded.
+l/gtk+3-3.2.2-x86_64-1gsb.txz: Upgraded.
+l/libcroco-0.6.3-x86_64-1gsb.txz: Upgraded.
+a/libgnome-keyring-3.2.2-x86_64-1gsb.txz: Upgraded.
+l/librest-0.7.12-x86_64-1gsb.txz: Upgraded.
+a/evolution-data-server-3.2.2-x86_64-1gsb.txz: Upgraded.
+a/gnome-keyring-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/NetworkManager-0.9.2.0-x86_64-1gsb.txz: Upgraded.
+n/NetworkManager-pptp-0.9.2.0-x86_64-1gsb.txz: Upgraded.
+ap/cheese-3.2.2-x86_64-2gsb.txz: Rebuilt.
+l/gtkhtml-4.2.2-x86_64-1gsb.txz: Upgraded.
+n/evolution-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/empathy-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/network-manager-applet-0.9.2.0-x86_64-1gsb.txz: Upgraded.
+ap/seahorse-3.2.2-x86_64-1gsb.txz: Upgraded.
+n/gtk-vnc-0.4.4-x86_64-2gsb.txz: Rebuilt.
+go/gnumeric-1.10.17-x86_64-1gsb.txz: Upgraded.
+t/gnome-themes-standard-3.2.1-x86_64-1gsb.txz: Upgraded.
+ap/eog-3.2.2-x86_64-1gsb.txz: Upgraded.
+ap/gnome-games-3.2.1-x86_64-1gsb.txz: Upgraded.
+a/gnome-panel-3.2.1-x86_64-2gsb.txz: Rebuilt.
++--------------------------+
+Wed Nov 11 10:24:21 GMT 2011
+l/libicu-4.8.1-x86_64-1gsb.txz: Rebuilt.
+  Add --with-library-bits to configure.
++--------------------------+
+Wed Nov  9 22:41:32 GMT 2011
+a/gnome-settings-daemon-3.2.2-x86_64-1gsb.txz: Upgraded.
+l/libgee-0.6.3-x86_64-1gsb.txz: Upgraded.
+a/
++--------------------------+
+Mon Dec 26 17:42:54 GMT 2011
+l/gdk-pixbuf2-2.24.1-x86_64-2gsb.txz: Reconfigured.
+  Added --with-x11 to keep binary compatibility.  Thanks to Chris Vine for the
+  fix and Joshua Crawford for reporting the bug. 
+a/evolution-data-server-3.2.2-x86_64-1gsb.txz: Patched.
+  https://bugzilla.gnome.org/show_bug.cgi?id=665253 
+  https://bugzilla.gnome.org/show_bug.cgi?id=662068 
+  Thanks for Mario for reporting the bug.  This package will likely be
+  upgraded to 3.2.3 soon upstream.
++--------------------------+
 Mon Dec 19 14:49:28 GMT 2011
 n/folks-0.6.6-x86_64-1gsb.txz: Upgraded.
 go/tracker-0.12.8-x86_64-1gsb.txz: Upgraded.
