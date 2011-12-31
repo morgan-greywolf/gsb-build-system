@@ -20,7 +20,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VERSION=1.45.05
+VERSION=1.46.01
 BUILD=1
 TAG=${TAG:-gsb}
 
@@ -50,7 +50,7 @@ elif [ "$ARCH" = "s390" ]; then
   GSBCFLAGS="-O2"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "x86_64" ]; then
-  GSBCFLAGS=${GSB_GSBCFLAGS:-"-O2 -fPIC"}
+  GSBCFLAGS=${GSBCFLAGS:-"-O2 -fPIC"}
   LIBDIRSUFFIX="64"
 else
   GSBCFLAGS=${GSBCFLAGS:-"-O2"}
@@ -71,30 +71,32 @@ find . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
-# Don't use the included binary voice dictionaries
-rm -f espeak-data/*_dict
 # Build and install.
 ( cd src  &&
   cp portaudio19.h portaudio.h &&
   make distclean &&
-  make ${NUMJOBS} )
+  make CXXFLAGS="${GSBCFLAGS}" ${NUMJOBS} )
 
 # Install
 ( cd src &&
   make install DESTDIR=${PKG} BINDIR=/usr/bin INCDIR=/usr/include/espeak LIBDIR=/usr/lib${LIBDIRSUFFIX} 
 ) || exit 1
 # Remove static library
-rm $PKG/usr/lib/libespeak.a
+rm $PKG/usr/lib${LIBDIRSUFFIX}/libespeak.a
 
 find $PKG | xargs file | egrep "executable|shared object" | grep "ELF" | \
   cut -d: -f1 | xargs strip --strip-unneeded 2>/dev/null
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 sed -i 's/\r//' License.txt
-cp -a ReadMe License.txt docs/* \
+cp -a ReadMe ChangeLog License.txt docs/* \
   $PKG/usr/doc/$PKGNAM-$VERSION
 find $PKG/usr/doc/$PKGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 chown -R root:root $PKG/usr/doc/$PKGNAM-$VERSION
+
+# Man page from Debian
+mkdir -p $PKG/usr/man/man1
+gzip -9c $CWD/espeak.1 > $PKG/usr/man/man1/espeak.1.gz
 
 mkdir -p $PKG/install 
 cat $CWD/slack-desc > $PKG/install/slack-desc
