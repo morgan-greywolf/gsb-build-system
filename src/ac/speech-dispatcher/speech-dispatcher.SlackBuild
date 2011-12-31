@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 VERSION=0.7.1
-BUILD=2
+BUILD=3
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j10 "}
@@ -78,7 +78,6 @@ CFLAGS="$GSBCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --build=$ARCH-$DISTRO-linux \
   --disable-static \
-  --with-oss \
   --with-alsa \
   --with-libao \
   --with-pulse \
@@ -88,7 +87,6 @@ make ${NUMJOBS} || make || exit 1
 make DESTDIR=$PKG install || exit 1
 
 # Add client configuration for orca
-rm -fr $PKG/usr/share/speech-dispatcher
 zcat $CWD/orca.conf.gz > $PKG/etc/speech-dispatcher/clients/orca.conf.new || exit 1
 mv $PKG/etc/speech-dispatcher/speechd.conf \
    $PKG/etc/speech-dispatcher/speechd.conf.new || exit 1
