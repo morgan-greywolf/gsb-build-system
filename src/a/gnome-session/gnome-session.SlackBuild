@@ -21,7 +21,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 VERSION=3.2.1
-BUILD=1
+BUILD=2
 TAG=${TAG:-gsb}
 
 NUMJOBS=${NUMJOBS:-" -j10 "}
@@ -63,6 +63,9 @@ cd $TMP &&
 rm -rf $PKGNAM-$VERSION &&
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
 cd $PKGNAM-$VERSION || exit 1
+
+# Add session-properties to application list
+zcat $CWD/gnome-session.session.properties.display.diff.gz | patch -p1
 
 chown -R root:root .
 find . \

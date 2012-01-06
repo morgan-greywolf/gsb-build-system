@@ -1,3 +1,20 @@
+Tue Jan  3 23:05:00 GMT 2012
+a/gnome-session-3.2.1-i486-2gsb.txz: Rebuilt.
+  Added gnome-session properties to the applications list.
+ac/speech-dispatcher-0.7.1-i486-3gsb.txz: Rebuilt.
+  Added more dictionaries.
+a/gsb-desktop-3.2.2-i486-4gsb.txz: Rebuilt.
+  Added gnome-contacts to default application install.
+ac/espeak-1.46.01-i486-1gsb.txz: Upgraded.
+extra/alsa-plugins-1.0.24-i486-2gsb.txz: Rebuilt.
+  Fixed typo in the slack-required.
++--------------------------+
+Fri Dec 30 21:52:41 GMT 2011
+l/gjs-1.30.0-i486-2gsb.txz: Rebuilt.
+  This package has been rebuilt following a number of bug reports that gjs was
+  failing.  The slack-required file has also been updated to ensure that users
+  have the latest seamonkey-solibs-2.5 official patch package.
++--------------------------+
 Mon Dec 26 19:19:36 GMT 2011
 a/gnome-control-center-3.2.2-i486-2gsb.txz: Rebuilt.
   Missing the network-applet.  Thanks to JDifool for reporting the missing

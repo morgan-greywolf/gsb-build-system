@@ -30,6 +30,7 @@ gir-repository
 gjs
 glib-networking
 gnome-backgrounds
+gnome-contacts
 gnome-control-center
 gnome-desktop
 gnome-disk-utility
