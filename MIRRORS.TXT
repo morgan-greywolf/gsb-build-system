@@ -6,13 +6,13 @@ Using a nearby server will probably speed up your download, and also reduce the
 load on our main servers.  When you are configuring your slapt-get, please make
 sure to pick the mirror nearest you.
 
-We are happy to call OSUOSL a GSB sponsor (http://osuosl.org/), and that they
-graciously mirror the GSB software repository.  This is the same organization &
-mirror that is the official Slackware mirror :-) The OSUOSL mirror is our
-official US mirror.  OSUOSL sponsors and hosts a wide variety of excellent Open
-Source projects and initiatives, including, GNOME and Slackware.   Show them
-how much you appreciate what they give to the community by providing a donation
-(http://osuosl.org/donate).
+We are happy to call OSUOSL a GSB sponsor, and that they graciously mirror the
+GSB software repository.  This is the same organization & mirror that is the
+official Slackware mirror :-) The OSUOSL mirror is our official US mirror.
+OSUOSL sponsors and hosts a wide variety of excellent Open Source projects and
+initiatives, including, GNOME and Slackware.   Show them how much you
+appreciate what they give to the community by providing a donation at
+http://osuosl.org/donate.
 
 If you know of any mirrors that are missing from this list, please email
 steve@gnomeslackbuild.org or chipster@gnomeslackbuild.org.
