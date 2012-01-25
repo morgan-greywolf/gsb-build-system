@@ -51,7 +51,7 @@ elif [ "$ARCH" = "s390" ]; then
   GSBCFLAGS="-O2"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "x86_64" ]; then
-  GSBCFLAGS=${GSB_GSBCFLAGS:-"-O2 -fPIC"}
+  GSBCFLAGS=${GSBCFLAGS:-"-O2 -fPIC"}
   LIBDIRSUFFIX="64"
   LIBRARY_BITS=64
 else
