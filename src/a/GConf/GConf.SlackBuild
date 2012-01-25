@@ -86,6 +86,7 @@ CFLAGS="$GSBCFLAGS" \
   --enable-defaults-service \
   --enable-gsettings-backend \
   --enable-introspection=yes \
+  --disable-orbit \
   || exit 1
 
 make ${NUMJOBS} || make || exit 1
