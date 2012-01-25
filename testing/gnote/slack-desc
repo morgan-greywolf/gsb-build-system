@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+gnote: gnote (GNOME notes)
+gnote:
+gnote: gnote is a note-taking application for GNOME mostly cloned from 
+gnote: Tomboy, except that is does not use Mono. It uses a wiki-style 
+gnote: interface and allows for the management of large libraries of
+gnote: personal information.
+gnote:
+gnote:
+gnote:
+gnote:
+gnote:
