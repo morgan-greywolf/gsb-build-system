@@ -85,3 +85,9 @@ dialog.  If you wish to re-enable your window titlebar buttons:
   going to need your attention.  You'll find the new incoming config files on
 your system with the ".new" extension.  You may need to fill these in with
 information from your old config files and then move them over.
+
+- If you want to get your webcam working with cheese and the user-accounts
+  application for GNOME control panel, you will need to install the
+gst-plugins-bad package from: 
+      http://gstreamer.freedesktop.org/src/gst-plugins-bad/  
+This package is not distributed because of licensing issues.

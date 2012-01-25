@@ -1,3 +1,36 @@
+Wed Jan 25 20:55:51 GMT 2012
+  GNOME 3.2.2 maintenance patches.
+patches/packages/gjs-1.30.1-x86_64-1gsb.txz: Upgraded.
+patches/packages/evolution-data-server-3.2.3-x86_64-1gsb.txz: Upgraded.
+patches/packages/gnome-icon-theme-symbolic-3.2.2-x86_64-1gsb.txz: Upgraded.
+patches/packages/gtkhtml-4.2.3-x86_64-1gsb.txz: Upgraded.
+patches/packages/evolution-3.2.3-x86_64-1gsb.txz: Upgraded.
+  Fixes numerous crashes.  For more information, see:
+     http://download.gnome.org/sources/evolution/3.2/evolution-3.2.3.changes.
+patches/packages/evolution-exchange-3.2.3-x86_64-1gsb.txz: Upgraded.
+patches/packages/evolution-groupwise-3.2.3-x86_64-1gsb.txz: Upgraded.
+patches/packages/gedit-3.2.6-x86_64-1gsb.txz: Upgraded.
+patches/packages/gnome-nettool-3.0.1-x86_64-1gsb.txz: Upgraded.
+patches/packages/mutter-3.2.2-x86_64-1gsb.txz: Upgraded.
+  Fixes a major memory leak with gnome-shell.  For more information, see:
+    https://bugzilla.gnome.org/show_bug.cgi?id=642652
+patches/packages/clutter-gst-1.4.6-x86_64-1gsb.txz: Upgraded.
+patches/packages/libgee-0.6.4-x86_64-1gsb.txz: Upgraded.
+patches/packages/gnome-shell-3.2.2.1-x86_64-1gsb.txz: Upgraded.
+  Fixes numerous crashes and brings improvements for the message tray.  For
+  more information, see: 
+    https://bugzilla.gnome.org/show_bug.cgi?id=663815
+    https://bugzilla.gnome.org/show_bug.cgi?id=664138
+    https://bugzilla.gnome.org/show_bug.cgi?id=648450
+    https://bugzilla.gnome.org/show_bug.cgi?id=667652
+    https://bugzilla.gnome.org/show_bug.cgi?id=668048
+patches/packages/heimdal-libraries-1.5.2-x86_64-1gsb.txz: Upgraded.
+  This contains two security fixes for the libtelnet library and for libkrb5
+  checksums (2012-01-11, 2012-01-10). For more information, see:
+    http://www.l5l.org/advisories.html?show=2012-01-10
+    http://www.l5l.org/advisories.html?show=2012-01-11
+  (* Security fix *)
++--------------------------+
 Tue Jan  3 23:05:00 GMT 2012
 a/gnome-session-3.2.1-x86_64-2gsb.txz: Rebuilt.
   Added gnome-session properties to the applications list.
