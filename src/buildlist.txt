@@ -229,6 +229,7 @@ pasture/libbonobo
 pasture/libgnome
 # Testing packages in testing/
 testing/gnote
+testing/tdb
 testing/rhythmbox
 # Installation package
 a/gsb-desktop
