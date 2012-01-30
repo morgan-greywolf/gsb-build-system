@@ -20,7 +20,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-VERSION=0.8.2
+VERSION=1.2.9
 BUILD=1
 TAG=${TAG:-gsb}
 
@@ -39,7 +39,7 @@ fi
 DISTRO=${DISTRO:-slackware}
 TMP=${TMP:-/tmp}
 PKGDEST=${PKGDEST:-$TMP}
-PKGNAM=gnote
+PKGNAM=tdb
 PKG=$TMP/package-$PKGNAM
 CWD=$(pwd)
 
@@ -61,7 +61,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKGDEST
 cd $TMP &&
 rm -rf $PKGNAM-$VERSION &&
-tar xvf $CWD/$PKGNAM-$VERSION.tar.xz &&
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z &&
 cd $PKGNAM-$VERSION || exit 1
 
 chown -R root:root .
@@ -77,11 +77,10 @@ CFLAGS="$GSBCFLAGS" \
   --sysconfdir=/etc \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --build=$ARCH-$DISTRO-linux \
-  --disable-static \
   || exit 1
 
-make V=0 ${NUMJOBS} || make || exit 1
-make V=0 DESTDIR=$PKG install || exit 1
+make ${NUMJOBS} || make || exit 1
+make DESTDIR=$PKG install || exit 1
 
 find $PKG | xargs file | egrep "executable|shared object" | grep "ELF" | \
   cut -d: -f1 | xargs strip --strip-unneeded 2>/dev/null
@@ -102,14 +101,12 @@ if [ -d $PKG/usr/man ]; then
 fi
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
-cp -a AUTHORS COPYING NEWS README \
-  $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a docs/* $PKG/usr/doc/$PKGNAM-$VERSION
 find $PKG/usr/doc/$PKGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 chown -R root:root $PKG/usr/doc/$PKGNAM-$VERSION
 
 mkdir -p $PKG/install 
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/slack-required > $PKG/install/slack-required
 
 cd $PKG
 makepkg -p -l y -c n $PKGDEST/${PKGNAM}-${VERSION}-$ARCH-${BUILD}${TAG}.txz

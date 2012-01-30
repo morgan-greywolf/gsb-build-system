@@ -1,0 +1,7 @@
+PKGNAME="tdb"
+VERSION="1.2.9"
+HOMEPAGE="http://tdb.samba.org"
+DOWNLOAD="http://www.samba.org/ftp/tdb/tdb-$VERSION.tar.gz"
+MD5SUM="4d97d18bbe9040038d4e003495bb8cd1"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

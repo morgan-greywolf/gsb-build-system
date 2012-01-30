@@ -3,6 +3,6 @@ VERSION="0.8.2"
 HOMEPAGE="http://live.gnome.org/gnote"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
 DOWNLOAD="${GNOME_SERVER}/gnote/0.8/gnote-${VERSION}.tar.xz"
-MD5SUM="0a09d8dcbee5a2300725008ee82054a3"
+MD5SUM="39ba1eb02b0b2dc4d71df1e455a7df1c"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"
