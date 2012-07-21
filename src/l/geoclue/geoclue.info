@@ -1,0 +1,7 @@
+PKGNAME="geoclue"
+VERSION="0.12"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/GeoClue"
+DOWNLOAD="http://cgit.freedesktop.org/geoclue/snapshot/geoclue-0.12.tar.gz"
+MD5SUM="d563d1f8df03db37aa621b999f3f4a1b"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"
