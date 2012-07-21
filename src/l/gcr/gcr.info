@@ -1,0 +1,8 @@
+PKGNAME="gcr"
+VERSION="3.4.1"
+HOMEPAGE="http://www.gnome.org"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/gcr/3.4/gcr-${VERSION}.tar.xz"
+MD5SUM="52dd83d8f64654147e720cbd186ee357"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

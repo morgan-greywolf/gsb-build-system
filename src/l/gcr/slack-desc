@@ -1,0 +1,11 @@
+   |-----handy-ruler------------------------------------------------------|
+gcr: gcr (GCR and GCK crypto libraries)
+gcr: 
+gcr: The gcr and gck libraries allow applications to display certificates 
+gcr: and access key stores. They also provide the viewer for crypto files 
+gcr: on the GNOME desktop and can access PKCS#11 modules like smart cards.
+gcr:
+gcr:
+gcr:
+gcr:
+gcr:
