@@ -1,7 +1,0 @@
-PRGNAM="gslapt"
-VERSION="0.5.3e"
-HOMEPAGE="http://software.jaos.org/"
-DOWNLOAD="http://software.jaos.org/source/gslapt/gslapt-0.5.3e.tar.gz"
-MD5SUM="7005ece7cfc362f52c3a42a674aa8d92"
-MAINTAINER="Chip Cuccio"
-EMAIL="chipster@gnomeslackbuild.org"

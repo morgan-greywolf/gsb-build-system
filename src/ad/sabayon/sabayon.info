@@ -1,8 +1,0 @@
-PKGNAME="sabayon"
-VERSION="2.30.1"
-HOMEPAGE="http://projects.gnome.org/sabayon/"
-GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/sabayon/2.30/sabayon-2.30.1.tar.bz2"
-MD5SUM="c13b3b992cf686c1397dc28b5f2a6f20"
-MAINTAINER="Steve Kennedy"
-EMAIL="steve@gnomeslackbuild.org"

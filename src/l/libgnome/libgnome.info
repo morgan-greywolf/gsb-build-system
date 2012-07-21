@@ -1,8 +1,0 @@
-PKGNAME="libgnome"
-VERSION="2.32.1"
-HOMEPAGE="http://www.gnome.org"
-GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/libgnome/2.32/libgnome-${VERSION}.tar.bz2"
-MD5SUM="a4345e6087ae6195d65a4674ffdca559"
-MAINTAINER="Steve Kennedy"
-EMAIL="steve@gnomeslackbuild.org"

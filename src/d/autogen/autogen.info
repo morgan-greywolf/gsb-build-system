@@ -1,7 +1,0 @@
-PKGNAME="autogen"
-VERSION="5.11.5"
-HOMEPAGE="http://autogen.sourceforge.net/"
-DOWNLOAD="http://downloads.sourceforge.net/project/autogen/AutoGen/AutoGen-$VERSION/autogen-$VERSION.tar.bz2"
-MD5SUM="51c841eab6114de22b55f77a1c4f85b8"
-MAINTAINER="Steve Kennedy"
-EMAIL="steve@gnomeslackbuild.org"
