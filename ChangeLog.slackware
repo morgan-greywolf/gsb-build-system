@@ -1,456 +1,492 @@
-Tue Feb 22 20:10:18 GMT 2011
-d/gtkmm-2.22.0-i486-1gsb.txz: Upgraded.
-  Now linked against new atkmm package.
-ap/gnome-mplayer-1.0.0-i486-1gsb.txz: Upgraded.
-ap/gthumb-2.12.2-i486-1gsb.txz: Upgraded.
-ap/gnome-python-desktop-2.32.0-i486-1gsb.txz: Upgraded.
-l/gst-ffmpeg-0.10.11-i486-1gsb.txz: Upgraded.
-l/libdmapsharing-2.1.9-i486-1gsb.txz: Upgraded.
-ad/slapt-get-0.10.2h-i486-1gsb.txz: Upgraded.
-go/goffice-0.8.13-i486-1gsb.txz: Upgraded.
-go/abiword-2.8.6-i486-1gsb.txz: Upgraded.
-go/libgsf-1.14.19-i486-1gsb.txz: Upgraded.
-go/gnumeric-1.10.13-i486-1gsb.txz: Upgraded.
-ac/gnome-mag-0.16.3-i486-1gsb.txz: Upgraded.
-ac/espeak-1.44.05-i486-1gsb.txz: Upgraded.
-ac/speech-dispatcher-0.7.1-i486-1gsb.txz: Added.
-  This package replaces the now obsolete and unmaintained gnome-speech.
-  Thanks to Jonathon Nadeau for mentioning the new package.
-ac/mousetweaks-2.32.1-i486-1gsb.txz: Upgraded.
-l/pyxdg-0.19-i486-2gsb.txz: Rebuilt.
-  Fixed typos in the slack-desc.
-ac/orca-2.32.1-i486-1gsb.txz: Upgraded.
-t/gnome-backgrounds-2.32.0-noarch-1gsb.txz: Upgraded.
-l/clutter-1.2.14-i486-1gsb.txz: Upgraded.
-l/clutter-gtk-0.10.8-i486-1gsb.txz: Upgraded.
-ap/gnome-games-2.32.1-i486-1gsb.txz: Upgraded.
-ap/hamster-applet-2.32.1-i486-1gsb.txz: Upgraded.
-ap/sensors-applet-2.2.7-i486-1gsb.txz: Upgraded.
-m/mono-addins-0.5-i486-2gsb.txz: Rebuilt.
-m/gnome-sharp-2.24.2-i486-1gsb.txz: Upgraded.
-m/gnome-desktop-sharp-2.26.0-i486-5gsb.txz: Rebuilt.
-  Rebuilt against newer gnome-sharp.
-d/gdl-2.30.1-i486-1gsb.txz: Upgraded.
-d/autogen-5.11.5-i486-1gsb.txz: Upgraded.
-d/gitg-0.0.8-i486-1gsb.txz: Upgraded.
-d/bluefish-2.0.2-i486-1gsb.txz: Upgraded.
-ap/yelp-2.30.1-i486-2gsb.txz: Rebuilt.
-  Removed dependency on gnome-doc-utils.
-ad/gslapt-0.5.3e-i486-1gsb.txz: Upgraded.
-n/pptp-1.7.2-i486-3gsb.txz: Rebuilt.
-n/NetworkManager-pptp-0.8.2-i486-1gsb.txz: Upgraded.
-n/NetworkManager-openvpn-0.8.2-i486-1gsb.txz: Upgraded.
-ad/pessulus-2.30.4-i486-1gsb.txz: Upgraded.
-ad/sabayon-2.30.1-i486-1gsb.txz: Upgraded.
-t/murrine-engine-0.98.1.1-i486-1gsb.txz: Upgraded.
-  We are removing several packages from the tree in order which are either no
-  longer used, or we have decided are not really GNOME requirements for a full
-  desktop. Many of these will be moved over to SlackBuilds.org.
-go/postgresql: Removed.
-go/gnome-speech: Removed.
-  Superceded by speech-dispatcher.
-m/boo: Removed.
-m/taglib-sharp: Removed.
-m/ndesk-dbus: Removed.
-m/ndesk-dbus-glib: Removed.
-m/gnome-sharp: Removed.
-m/podsleuth: Removed.
-m/ipod-sharp: Removed.
-m/mono-zeroconf: Removed.
-m/banshee-1: Removed.
-m/tomboy: Removed.
-ac/gok: Removed.  
-go/python-dateutil: Removed.
-go/vobject: Removed.
-l/goocanvas: Removed.
-l/pygoocanvas: Removed.
-go/conduit: Removed.
-ap/gnome-doc-utils: Removed.
-  Conflicts with Slackware's linuxdoc-tools.
-a/devicekit: Removed.
-a/devicekit-power: Removed.
-  Superceded by upower.
+Mon Jan 30 18:34:44 GMT 2012
+  GNOME 3.2.2 maintenance patches.
+patches/avahi-0.6.30-i486-2gsb.txz: Patched.
+  Fix a potential problem where avahi could replace the /etc/HOSTNAME with
+  incorrect information.  Thanks to Robby Workman for pointing out the problem
+  and sending a patch.
+patches/clutter-1.8.4-i486-1gsb.txz: Upgraded.
+patches/packages/gjs-1.30.1-i486-1gsb.txz: Upgraded.
+patches/packages/evolution-data-server-3.2.3-i486-1gsb.txz: Upgraded.
+patches/packages/gnome-icon-theme-symbolic-3.2.2-i486-1gsb.txz: Upgraded.
+patches/packages/gtkhtml-4.2.3-i486-1gsb.txz: Upgraded.
+patches/packages/evolution-3.2.3-i486-1gsb.txz: Upgraded.
+  Fixes numerous crashes.  For more information, see:
+     http://download.gnome.org/sources/evolution/3.2/evolution-3.2.3.changes.
+patches/packages/evolution-exchange-3.2.3-i486-1gsb.txz: Upgraded.
+patches/packages/evolution-groupwise-3.2.3-i486-1gsb.txz: Upgraded.
+patches/packages/gedit-3.2.6-i486-1gsb.txz: Upgraded.
+patches/packages/gnome-nettool-3.0.1-i486-1gsb.txz: Upgraded.
+patches/packages/mutter-3.2.2-i486-1gsb.txz: Upgraded.
+  Fixes a major memory leak with gnome-shell.  For more information, see:
+    https://bugzilla.gnome.org/show_bug.cgi?id=642652
+patches/packages/clutter-gst-1.4.6-i486-1gsb.txz: Upgraded.
+patches/packages/libgee-0.6.4-i486-1gsb.txz: Upgraded.
+patches/packages/gnome-shell-3.2.2.1-i486-1gsb.txz: Upgraded.
+  Fixes numerous crashes and brings improvements for the message tray.  For
+  more information, see: 
+    https://bugzilla.gnome.org/show_bug.cgi?id=663815
+    https://bugzilla.gnome.org/show_bug.cgi?id=664138
+    https://bugzilla.gnome.org/show_bug.cgi?id=648450
+    https://bugzilla.gnome.org/show_bug.cgi?id=667652
+    https://bugzilla.gnome.org/show_bug.cgi?id=668048
+patches/packages/heimdal-libraries-1.5.2-i486-1gsb.txz: Upgraded.
+  This contains two security fixes for the libtelnet library and for libkrb5
+  checksums (2012-01-11, 2012-01-10). For more information, see:
+    http://www.l5l.org/advisories.html?show=2012-01-10
+    http://www.l5l.org/advisories.html?show=2012-01-11
+  (* Security fix *)
+testing/gnote-0.8.2-i486-1gsb.txz: Added.
+testing/tdb-1.2.9-i486-1gsb.txz: Added.
+testing/rhythmbox-2.95-i486-1gsb.txz: Added.
 +--------------------------+
-Tue Feb 22 15:09:42 GMT 2011
-ap/brasero-2.32.1-i486-1gsb.txz: Upgraded.
-ap/eog-2.32.1-i486-1gsb.txz: Upgraded.
-ap/eog-plugins-2.30.2-i486-1gsb.txz: Upgraded.
-ap/file-roller-2.32.1-i486-1gsb.txz: Upgraded.
-ap/gcalctool-5.32.2-i486-1gsb.txz: Upgraded.
-d/libsigc++-2.2.8-i486-1gsb.txz: Upgraded.
-d/cairomm-1.8.6-i486-1gsb.txz: Upgraded.
-d/pangomm-2.26.3-i486-1gsb.txz: Upgraded.
-d/atkmm-2.22.2-i486-1gsb.txz: Added.
+Tue Jan  3 23:05:00 GMT 2012
+a/gnome-session-3.2.1-i486-2gsb.txz: Rebuilt.
+  Added gnome-session properties to the applications list.
+ac/speech-dispatcher-0.7.1-i486-3gsb.txz: Rebuilt.
+  Added more dictionaries.
+a/gsb-desktop-3.2.2-i486-4gsb.txz: Rebuilt.
+  Added gnome-contacts to default application install.
+ac/espeak-1.46.01-i486-1gsb.txz: Upgraded.
+extra/alsa-plugins-1.0.24-i486-2gsb.txz: Rebuilt.
+  Fixed typo in the slack-required.
 +--------------------------+
-Mon Feb 21 19:30:09 GMT 2011
-n/empathy-2.30.3-i486-2gsb.txz: Rebuilt.
-n/NetworkManager-0.8.2-i486-1gsb.txz: Upgraded.
-l/libevent-2.0.10-i486-1gsb.txz: Upgraded.
-n/transmission-2.20-i486-1gsb.txz: Upgraded.
-n/network-manager-applet-0.8.2-i486-1gsb.txz: Upgraded.
-ap/totem-pl-parser-2.32.3-i486-1gsb.txz: Upgraded.
+Fri Dec 30 21:52:41 GMT 2011
+l/gjs-1.30.0-i486-2gsb.txz: Rebuilt.
+  This package has been rebuilt following a number of bug reports that gjs was
+  failing.  The slack-required file has also been updated to ensure that users
+  have the latest seamonkey-solibs-2.5 official patch package.
 +--------------------------+
-Sun Feb 20 16:43:07 GMT 2011
-a/gvfs-1.6.6-i486-1gsb.txz: Upgraded.
-a/nautilus-2.32.2.1-i486-1gsb.txz: Upgraded.
-l/libgdata-0.6.6-i486-1gsb.txz: Upgraded.
-a/evolution-data-server-2.32.2-i486-1gsb.txz: Upgraded.
-a/gnome-menus-2.30.5-i486-1gsb.txz: Upgraded.
-l/libgnomecanvas-2.30.3-i486-1gsb.txz: Upgraded.
-a/gnome-vfs-2.24.4-i486-1gsb.txz: Upgraded.
-l/libgnome-2.32.1-i486-1gsb.txz: Upgraded.
-a/gnome-panel-2.32.1-i486-1gsb.txz: Upgraded.
-a/zenity-2.32.1-i486-1gsb.txz: Upgraded.
-a/gnome-settings-daemon-2.32.1-i486-1gsb.txz: Upgraded.
-l/libgtop-2.28.2-i486-1gsb.txz: Upgraded.
-a/gnome-control-center-2.32.1-i486-1gsb.txz: Upgraded.
-a/libgnomeui-2.24.5-i486-1gsb.txz: Upgraded.
-a/gnome-applets-2.32.1.1-i486-1gsb.txz: Upgraded.
-n/webkit-1.2.7-i486-1gsb.txz: Upgraded.
-a/upower-0.9.5-i486-2gsb.txz: Rebuilt.
-a/gnome-session-2.32.1-i486-1gsb.txz: Upgraded.
-t/gnome-themes-2.32.1-i486-1gsb.txz: Upgraded.
-a/gsb-desktop-2.32.2-i486-1gsb.txz: Upgraded.
-l/gtkhtml-3.32.2-i486-1gsb.txz: Upgraded.
-l/libpst-0.6.49-i486-1gsb.txz: Upgraded.
-n/evolution-2.32.2-i486-1gsb.txz: Upgraded.
-n/evolution-exchange-2.32.2-i486-1gsb.txz: Upgraded.
-n/evolution-webcal-2.32.0-i486-1gsb.txz: Upgraded.
-n/gnome-netstatus-2.28.2-i486-1gsb.txz: Upgraded.
-n/gtk-vnc-0.4.3-i486-1gsb.txz: Upgraded.
-n/vino-2.32.1-i486-1gsb.txz: Upgraded.
-n/libnice-0.1.0-i486-1gsb.txz: Upgraded.
-n/farsight2-0.0.25-i486-1gsb.txz: Upgraded.
-n/telepathy-glib-0.13.13-i486-1gsb.txz: Upgraded.
-n/telepathy-farsight-0.0.16-i486-1gsb.txz: Upgraded.
-n/nautilus-sendto-2.32.0-i486-1gsb.txz: Upgraded.
-n/telepathy-python-0.15.19-i486-1gsb.txz: Upgraded.
-n/papyon-0.5.4-i486-1gsb.txz: Upgraded.
-n/telepathy-butterfly-0.5.15-i486-1gsb.txz: Upgraded.
-n/telepathy-gabble-0.10.5-i486-1gsb.txz: Upgraded.
-n/telepathy-mission-control-5.6.1-i486-1gsb.txz: Upgraded.
-l/libgee-0.6.1-i486-1gsb.txz: Upgraded.
+Mon Dec 26 19:19:36 GMT 2011
+a/gnome-control-center-3.2.2-i486-2gsb.txz: Rebuilt.
+  Missing the network-applet.  Thanks to JDifool for reporting the missing
+  applet.
 +--------------------------+
-Sat Feb 19 14:32:34 GMT 2011
-l/glib2-2.26.1-i486-1gsb.txz: Upgraded.
-l/gdk-pixbuf2-2.22.1-i486-1gsb.txz: Upgraded.
-  This package has been renamed from gdk-pixuf to gdk-pixbuf2.
-l/gtk+2-2.22.1-i486-1gsb.txz: Upgraded.
-l/ORBit2-2.14.19-i486-2gsb.txz: Rebuilt.
-a/GConf-2.32.0-i486-2gsb.txz: Rebuilt.
-l/gnome-mime-data-2.18.0-i486-4gsb.txz: Rebuilt.
-m/libgdiplus-2.8.1-i486-1gsb.txz: Upgraded.
-m/mono-2.8.2-i486-1gsb.txz: Upgraded.
-m/gtk-sharp-2.12.10-i486-2gsb.txz: Rebuilt.
-l/libtasn1-2.9-i486-1gsb.txz: Upgraded.
-a/libgnome-keyring-2.32.0-i486-1gsb.txz: Added.
-a/gnome-keyring-2.32.1-i486-1gsb.txz: Upgraded.
-l/libicu-4.6-i486-1gsb.txz: Upgraded.
-l/libsoup-2.32.2-i486-1gsb.txz: Upgraded.
-a/gnome-desktop-2.32.1-i486-1gsb.txz: Upgraded.
-l/usbmuxd-1.0.6-i486-1gsb.txz: Upgraded.
-l/libimobiledevice-1.0.4-i486-1gsb.txz: Upgraded.
+Mon Dec 26 17:42:54 GMT 2011
+l/gdk-pixbuf2-2.24.1-i486-2gsb.txz: Reconfigured.
+  Added --with-x11 to keep binary compatibility.  Thanks to Chris Vine for the
+  fix and Joshua Crawford for reporting the bug. 
+a/evolution-data-server-3.2.2-i486-1gsb.txz: Patched.
+  https://bugzilla.gnome.org/show_bug.cgi?id=665253 
+  https://bugzilla.gnome.org/show_bug.cgi?id=662068 
+  Thanks for Mario for reporting the bug.  This package will likely be
+  upgraded to 3.2.3 soon upstream.
 +--------------------------+
-Thu Oct 28 15:03:54 BST 2010
-n/NetworkManager-0.8.1-i486-3gsb.txz: Rebuilt.
-  Removed vpn and pppd from 'plugins' in nm-system-settings.conf.  It was
-  causing NetworkManager to complain about missing plugins but these are found
-  in separate packages.  You might need to copy over the *.new file found in
-  /etc/NetworkManager.
+Mon Dec 19 14:49:28 GMT 2011
+n/folks-0.6.6-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.8-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.12-i486-1gsb.txz: Upgraded.
+l/gdk-pixbuf2-2.24.1-i486-1gsb.txz: Upgraded.
+l/gtk+3-3.2.3-i486-1gsb.txz: Upgraded.
+l/vte3-0.30.1-i486-2gsb.txz: Patched.
+ A bug with vte and gtk+3 caused virtual meta masks to work incorrectly,
+ leading to difficulties using applications like Midnight Commander in vte
+ based terminals.  This patch should fix that problem.
+   https://bugzilla.gnome.org/show_bug.cgi?id=663779
 +--------------------------+
-Thu Oct 28 12:44:18 BST 2010
-a/gtk-engines-2.20.2-i486-1gsb.txz: Upgraded.
-n/telepathy-glib-0.12.1-i486-1gsb.txz: Upgraded.
-n/telepathy-gabble-0.10.3-i486-1gsb.txz: Upgraded.
-n/telepathy-salut-0.4.0-i486-1gsb.txz: Upgraded.
-go/goffice-0.8.11-i486-1gsb.txz: Upgraded.
-go/gnumeric-1.10.10-i486-1gsb.txz: Upgraded.
+Mon Dec 12 20:07:55 GMT 2011
+ap/gedit-3.2.4-i486-1gsb.txz: Upgraded.
+l/pygobject3-3.0.3-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-2gsb.txz: Repackaged.
+  Updated the slapt-getrc file to point to slackware-13.37, not
+  slackware-current. 
+a/gsb-desktop-3.2.2-i486-3gsb.txz: Rebuilt.
+  Added colord to slack-required.
 +--------------------------+
-Sun Oct 24 12:59:51 BST 2010
-ap/gthumb-2.12.0-i486-1gsb.txz: Upgraded.
-ap/cheese-2.32.0-i486-1gsb.txz: Upgraded.
-ap/totem-pl-parser-2.32.0-i486-1gsb.txz: Upgraded.
-ap/seahorse-2.32.0-i486-1gsb.txz: Upgraded.
-ap/seahorse-plugins-2.30.1-i486-3gsb.txz: Rebuilt.
-  Rebuilt against latest seahorse package.
-ap/gnome-system-monitor-2.28.2-i486-1gsb.txz: Upgraded.
-ap/gnome-utils-2.32.0-i486-1gsb.txz: Upgraded.
-ap/deskbar-applet-2.32.0-i486-1gsb.txz: Upgraded.
-ap/gnome-doc-utils-0.20.2-i486-1gsb.txz: Upgraded.
-ap/gnome-user-docs-2.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-session-2.32.0-i486-2gsb.txz: Rebuilt.
-  Changed the default GSETTINGS_BACKEND to gconf in the xinitrc.gnome.  If you
-  start gnome by startx, when you may want to rerun xwmconfig to update your
-  startup script.
-n/NetworkManager-0.8.1-i486-2gsb.txz: Rebuilt.
-  Create a /var/lib/dhclient directory for lease files.
-ap/brasero-2.32.0-i486-2gsb.txz: Rebuilt.
-  Update glib schemas in doinst.sh otherwise brasero will complain about not
-  being installed properly.  This will fix an annoying bug where
-  right-clicking on mounted volume would flicker.
-l/libevent-1.4.14b-i486-1gsb.txz: Added.
-  This package is needed by the latest transmission.
-n/transmission-2.11-i486-1gsb.txz: Upgraded.
+Sun Dec  4 18:50:11 GMT 2011
+n/folks-0.6.5-i486-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-i486-2gsb.txz: Reconfigured.
+  Disabled introspection in pygobject-2.28.6.
+l/pygobject3-3.0.1-i486-1gsb.txz: Added.
+  Added newer 3.x series of pygobject which support introspection.
+ap/gnome-games-3.2.1-i486-2gsb.txz: Rebuilt.
+ac/caribou-0.4.1-i486-3gsb.txz: Rebuilt.
+  Added pyatspi to slack-required.
 +--------------------------+
-Sat Oct 16 13:11:49 BST 2010
-ap/bug-buddy-2.32.0-i486-2gsb.txz: Rebuilt.
-  Disable the gnomebreakpad gconf string to prevent loading of removed module.
-ad/gksu-polkit-0.0.2-i486-4gsb.txz: Patched.  
-  Upstream git patch d7e31609efe8031dbd56b87caf4200330594488f.  This patch
-  fixes the annoying 100% CPU bug in gksu-polkit when there is no stdin.
-a/libgnomeui-2.24.4-i486-1gsb.txz: Upgraded.
-ac/at-spi-1.32.0-i486-1gsb.txz: Upgraded.
+Sun Nov 27 15:41:43 GMT 2011
+extra/gst-plugins-ugly-0.10.18-i486-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-i486-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.2-i486-1gsb.txz: Upgraded.
 +--------------------------+
-Tue Oct 12 17:00:17 BST 2010
-l/libgnome-2.32.0-i486-2gsb.txz: Rebuilt.
-  Linked against the latest libcanberra package.
-ap/gdm-2.20.11-i486-3gsb.txz: Reconfigured.
-  Disable building static libraries.
+Thu Nov 24 17:06:53 GMT 2011
+ac/at-spi2-core-2.2.3-i486-1gsb.txz: Upgraded.
+n/telepathy-logger-0.2.12-i486-1gsb.txz: Upgraded.
+ad/gconf-editor-3.0.1-i486-1gsb.txz: Upgraded.
+ap/eog-plugins-3.2.2-i486-1gsb.txz: Upgraded.
+n/papyon-0.5.6-i486-1gsb.txz: Upgraded.
+d/anjuta-3.2.2-i486-1gsb.txz: Upgraded.
 +--------------------------+
-Sun Oct 10 18:37:25 BST 2010
-ap/gnome-media-2.32.0-i486-1gsb.txz: Upgraded.
-ap/gnome-terminal-2.30.2-i486-1gsb.txz: Upgraded.
-ap/gnome-python-desktop-2.30.2-i486-1gsb.txz: Upgraded.
-l/libdmapsharing-2.0.4-i486-1gsb.txz: Added.
-  libdmapsharing is needed for DAAP music sharing in rhythmbox.
-ap/rhythmbox-0.13.1-i486-1gsb.txz: Upgraded.
-ad/slapt-get-0.10.2g-i486-1gsb.txz: Upgraded.
-go/libgda-4.0.12-i486-1gsb.txz: Upgraded.
-ac/mousetweaks-2.32.0-i486-1gsb.txz: Upgraded.
-ac/orca-2.32.0-i486-1gsb.txz: Upgraded.
-ap/gnome-games-2.32.0-i486-1gsb.txz: Upgraded.
-ap/hamster-applet-2.32.0-i486-1gsb.txz: Upgraded.
-m/mono-addins-0.5-i486-1gsb.txz: Upgraded.
-d/devhelp-2.32.0-i486-1gsb.txz: Upgraded.
-d/anjuta-2.30.2.1-i486-1gsb.txz: Upgraded.
-l/libgee-0.6.0-i486-1gsb.txz: Upgraded.
-go/tracker-0.8.17-i486-1gsb.txz: Upgraded.
-n/NetworkManager-pptp-0.8.1-i486-1gsb.txz: Upgraded.
-n/NetworkManager-openvpn-0.8.1-i486-1gsb.txz: Upgraded.
-ad/pessulus-2.30.3-i486-1gsb.txz: Upgraded.
-ap/gnome-power-manager-2.32.0-i486-1gsb.txz: Upgraded.
+Wed Nov 16 22:46:15 GMT 2011
+ap/seahorse-sharing-3.2.1-i486-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+l/colord-0.1.13-i486-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+ac/orca-3.2.2-i486-1gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
+ac/caribou-0.4.1-i486-2gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
 +--------------------------+
-Sun Oct 10 15:14:14 BST 2010
-n/NetworkManager-0.8.1-i486-1gsb.txz: Upgraded.
-n/network-manager-applet-0.8.1-i486-1gsb.txz: Upgraded.
-n/liferea-1.6.5-i486-1gsb.txz: Upgraded.
-ap/bug-buddy-2.32.0-i486-1gsb.txz: Upgraded.
-l/gst-plugins-good-0.10.23-i486-1gsb.txz: Upgraded.
-ap/brasero-2.32.0-i486-1gsb.txz: Upgraded.
-l/gtksourceview-2.10.5-i486-1gsb.txz: Upgraded.
-ap/gedit-2.30.4-i486-1gsb.txz: Upgraded.
-ap/eog-2.32.0-i486-1gsb.txz: Upgraded.
-ap/evince-2.30.3-i486-1gsb.txz: Upgraded.
-ap/eog-plugins-2.30.1-i486-1gsb.txz: Upgraded.
-ap/file-roller-2.32.0-i486-1gsb.txz: Upgraded.
-ap/gcalctool-5.32.0-i486-1gsb.txz: Upgraded.
+Wed Nov 16 19:54:18 GMT 2011
+ac/at-spi2-core-2.2.2-i486-1gsb.txz: Upgraded.
+ac/at-spi2-atk-2.2.2-i486-1gsb.txz: Upgraded.
+ap/file-roller-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gedit-3.2.3-i486-1gsb.txz: Upgraded.
+ap/gnome-user-docs-3.2.2-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.6-i486-1gsb.txz: Upgraded.
+n/telepathy-gabble-0.12.7-i486-1gsb.txz: Upgraded.
+l/libevent-2.0.15-i486-1gsb.txz: Upgraded.
+n/transmission-2.42-i486-1gsb.txz: Upgraded.
+n/epiphany-extensions-3.2.0-i486-1gsb.txz: Upgraded.
+n/vino-3.2.2-i486-1gsb.txz: Upgraded.
+n/vinagre-3.2.2-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-1gsb.txz: Upgraded.
+n/balsa-2.4.10-i486-1gsb.txz: Upgraded.
+l/portaudio-v19_20110326-i486-1gsb.txz: Upgraded.
+ac/espeak-1.45.05-i486-1gsb.txz: Upgraded.
+ac/pyatspi-2.2.1-i486-1gsb.txz: Upgraded.
+ac/orca-3.2.2-i486-1gsb.txz: Upgraded.
+ac/mousetweaks-3.2.1-i486-1gsb.txz: Upgraded.
+ac/accerciser-3.2.1-i486-1gsb.txz: Upgraded.
+ac/caribou-0.4.1-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.11-i486-1gsb.txz: Upgraded.
+d/gdl-3.2.0-i486-1gsb.txz: Upgraded.
+d/anjuta-3.2.1-i486-1gsb.txz: Upgraded.
+d/devhelp-3.2.0-i486-1gsb.txz: Upgraded.
+extra/gst-plugins-ugly-0.10.18-i486-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.1-i486-1gsb.txz: Upgraded.
 +--------------------------+
-Sun Oct 10 00:00:34 BST 2010
-a/gnome-control-center-2.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-applets-2.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-session-2.32.0-i486-1gsb.txz: Upgraded.
-t/gnome-themes-2.32.0-i486-1gsb.txz: Upgraded.
-a/gsb-desktop-2.32.0-i486-1gsb.txz: Rebuilt.
-n/epiphany-2.30.6-i486-1gsb.txz: Upgraded.
-n/epiphany-extensions-2.32.0-i486-1gsb.txz: Upgraded.
-l/gtkhtml-3.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-icon-theme-2.30.3-i486-1gsb.txz: Upgraded.
-n/evolution-2.32.0-i486-1gsb.txz: Upgraded.
-n/evolution-exchange-2.32.0-i486-1gsb.txz: Upgraded.
-n/vinagre-2.30.3-i486-1gsb.txz: Upgraded.
-n/telepathy-glib-0.12.0-i486-1gsb.txz: Upgraded.
-n/farsight2-0.0.21-i486-1gsb.txz: Upgraded.
-n/telepathy-python-0.15.18-i486-1gsb.txz: Upgraded.
-n/telepathy-mission-control-5.6.0-i486-1gsb.txz: Upgraded.
-n/empathy-2.30.3-i486-1gsb.txz: Upgraded.
+Mon Nov 14 18:14:45 GMT 2011
+l/glib2-2.30.2-i486-1gsb.txz: Upgraded.
+l/gtk+3-3.2.2-i486-1gsb.txz: Upgraded.
+l/libcroco-0.6.3-i486-1gsb.txz: Upgraded.
+a/libgnome-keyring-3.2.2-i486-1gsb.txz: Upgraded.
+l/librest-0.7.12-i486-1gsb.txz: Upgraded.
+a/evolution-data-server-3.2.2-i486-1gsb.txz: Upgraded.
+a/gnome-keyring-3.2.2-i486-1gsb.txz: Upgraded.
+n/NetworkManager-0.9.2.0-i486-1gsb.txz: Upgraded.
+n/NetworkManager-pptp-0.9.2.0-i486-1gsb.txz: Upgraded.
+ap/cheese-3.2.2-i486-2gsb.txz: Rebuilt.
+l/gtkhtml-4.2.2-i486-1gsb.txz: Upgraded.
+n/evolution-3.2.2-i486-1gsb.txz: Upgraded.
+n/empathy-3.2.2-i486-1gsb.txz: Upgraded.
+n/network-manager-applet-0.9.2.0-i486-1gsb.txz: Upgraded.
+ap/seahorse-3.2.2-i486-1gsb.txz: Upgraded.
+n/gtk-vnc-0.4.4-i486-2gsb.txz: Rebuilt.
+go/gnumeric-1.10.17-i486-1gsb.txz: Upgraded.
+t/gnome-themes-standard-3.2.1-i486-1gsb.txz: Upgraded.
+ap/eog-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gnome-games-3.2.1-i486-1gsb.txz: Upgraded.
+a/gnome-panel-3.2.1-i486-2gsb.txz: Rebuilt.
 +--------------------------+
-Sat Oct  9 16:11:41 BST 2010
-n/webkit-1.2.5-i486-1gsb.txz: Upgraded.
-a/gnome-desktop-2.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-menus-2.30.4-i486-1gsb.txz: Upgraded.
-l/usbmuxd-1.0.5-i486-1gsb.txz: Added.
-l/libplist-1.3-i486-1gsb.txz: Added.
-l/libimobiledevice-1.0.3-i486-1gsb.txz: Added.
-a/gvfs-1.6.4-i486-1gsb.txz: Upgraded.
-  gvfs is now built against libimobiledevice to support the iPhone and other
-  Apple devices.
-a/nautilus-2.32.0-i486-1gsb.txz: Upgraded.
-a/libgweather-2.30.3-i486-1gsb.txz: Upgraded.
-l/heimdal-libraries-1.4-i486-1gsb.txz: Upgraded.
-l/libgdata-0.6.5-i486-1gsb.txz: Added.
-  libgdata package is now a dependency for evolution-data-server.
-a/evolution-data-server-2.32.0-i486-1gsb.txz: Upgraded.
-a/libcanberra-0.26-i486-1gsb.txz: Upgraded.
-a/gnome-panel-2.32.0.2-i486-1gsb.txz: Upgraded.
-  gnome-panel is no longer build against polkit since the clock mechanism has
-  been moved to the gnome-settings-daemon package.
-a/zenity-2.32.0-i486-1gsb.txz: Upgraded.
-a/metacity-2.30.3-i486-1gsb.txz: Upgraded.
-a/libgnomekbd-2.32.0-i486-1gsb.txz: Upgraded.
-a/gnome-settings-daemon-2.32.0-i486-1gsb.txz: Upgraded.
+Wed Nov 11 10:24:21 GMT 2011
+l/libicu-4.8.1-i486-1gsb.txz: Rebuilt.
+  Add --with-library-bits to configure.
 +--------------------------+
-Wed Oct  6 21:01:05 BST 2010
-l/libicu-4.4.2-i486-1gsb.txz: Upgraded.
-l/libproxy-0.4.6-i486-1gsb.txz: Upgraded.
-l/libsoup-2.32.0-i486-1gsb.txz: Upgraded.
+Wed Nov  9 22:41:32 GMT 2011
+a/gnome-settings-daemon-3.2.2-i486-1gsb.txz: Upgraded.
+l/libgee-0.6.3-i486-1gsb.txz: Upgraded.
+a/
 +--------------------------+
-Tue Oct  5 18:00:22 BST 2010
-GNOME SlackBuild 2.32 for x86 begins!
-  GNOME 2.32 was released September, 29.  We're starting a new development
-  cycle to bring all the latest and great from GNOME to Slackware.  GNOME 2.32
-  is the last planned major release in the GNOME 2.x series, with only
-  maintenance releases for GNOME 2.x planned going forward.  GNOME 2.32
-  features a limited set of new features in some applications, as the
-  community continues to focus on the upcoming GNOME 3.0 release scheduled for
-  April, 2011.
-l/glib2-2.26.0-i486-1gsb.txz: Upgraded.
-l/gdk-pixbuf-2.22.0-i486-1gsb.txz: Added.
-  The gdk-pixbuf package has been split upstream from the gtk+ package, and
-  is now a compile-time dependency for gtk+.
-l/gtk+2-2.22.0-i486-1gsb.txz: Upgraded.
-a/GConf-2.32.0-i486-1gsb.txz: Upgraded.
-l/libbonobo-2.32.0-i486-1gsb.txz: Upgraded.
-l/libgdiplus-2.6.7-i486-1gsb.txz: Upgraded.
-m/mono-2.6.7-i486-1gsb.txz: Upgraded.
-n/avahi-0.6.28-i486-1gsb.txz: Upgraded.
-l/libgnomecanvas-2.30.2-i486-1gsb.txz: Upgraded.
-l/libbonoboui-2.24.4-i486-1gsb.txz: Upgraded.
-l/libtasn1-2.8-i486-1gsb.txz: Upgraded.
+Mon Dec 26 17:42:54 GMT 2011
+l/gdk-pixbuf2-2.24.1-i486-2gsb.txz: Reconfigured.
+  Added --with-x11 to keep binary compatibility.  Thanks to Chris Vine for the
+  fix and Joshua Crawford for reporting the bug. 
+a/evolution-data-server-3.2.2-i486-1gsb.txz: Patched.
+  https://bugzilla.gnome.org/show_bug.cgi?id=665253 
+  https://bugzilla.gnome.org/show_bug.cgi?id=662068 
+  Thanks for Mario for reporting the bug.  This package will likely be
+  upgraded to 3.2.3 soon upstream.
 +--------------------------+
-Wed Jul 28 00:58:53 BST 2010
-patches/avahi-0.6.27-i486-1gsb.txz: Upgraded.
-  This latest version of avahi fixes a missing avahi-ui library. For more
-  information, see http://avahi.org/ticket/313.
+Mon Dec 19 14:49:28 GMT 2011
+n/folks-0.6.6-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.8-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.12-i486-1gsb.txz: Upgraded.
+l/gdk-pixbuf2-2.24.1-i486-1gsb.txz: Upgraded.
+l/gtk+3-3.2.3-i486-1gsb.txz: Upgraded.
+l/vte3-0.30.1-i486-2gsb.txz: Patched.
+ A bug with vte and gtk+3 caused virtual meta masks to work incorrectly,
+ leading to difficulties using applications like Midnight Commander in vte
+ based terminals.  This patch should fix that problem.
+   https://bugzilla.gnome.org/show_bug.cgi?id=663779
 +--------------------------+
-Sat Jul 24 23:53:02 BST 2010
-n/webkit-1.2.3-i486-1gsb.txz: Upgraded.
-  This is a new stable release of webkit which includes fixes the numerous
-  security issues. For a full list, please consult:
-    http://gitorious.org/webkitgtk/stable/blobs/master/WebKit/gtk/NEWS
-  (* Security fix *)    
-ap/rhythmbox-0.13.0-i486-1gsb.txz: Upgraded.
-  New stable release which fixes a number of crash conditions in the
-  previous 0.12 series, and offers better syncing for media players. 
+Mon Dec 12 20:07:55 GMT 2011
+ap/gedit-3.2.4-i486-1gsb.txz: Upgraded.
+l/pygobject3-3.0.3-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-2gsb.txz: Repackaged.
+  Updated the slapt-getrc file to point to slackware-13.37, not
+  slackware-current. 
+a/gsb-desktop-3.2.2-i486-3gsb.txz: Rebuilt.
+  Added colord to slack-required.
 +--------------------------+
-Sun Jul  4 14:10:59 BST 2010
-patches/avahi-0.6.26-i486-1gsb.txz: Upgraded.
-  Possible DoS (assertion failure) after avahi received a packet with
-  corrupted checksum.  For more information, see:
-      http://www.openwall.com/lists/oss-security/2010/06/23/4
-      https://bugzilla.redhat.com/show_bug.cgi?id=607293
-  (* Security fix *)    
-patches/liferea-1.6.4-i486-1gsb.txz: Upgraded.
-  This upgrade fixes broken Google reader authentication.
-patches/tracker-0.8.14-i486-1gsb.txz: Upgraded.
-  Among other improvements, this upgrade fixes a segfault when tracker guesses
-  content type in mounts without path. For more information, see:
-    http://ftp.gnome.org/pub/GNOME/sources/tracker/0.8/tracker-0.8.14.news
+Sun Dec  4 18:50:11 GMT 2011
+n/folks-0.6.5-i486-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-i486-2gsb.txz: Reconfigured.
+  Disabled introspection in pygobject-2.28.6.
+l/pygobject3-3.0.1-i486-1gsb.txz: Added.
+  Added newer 3.x series of pygobject which support introspection.
+ap/gnome-games-3.2.1-i486-2gsb.txz: Rebuilt.
+ac/caribou-0.4.1-i486-3gsb.txz: Rebuilt.
+  Added pyatspi to slack-required.
 +--------------------------+
-patches/liferea-1.6.4-i486-1gsb.txz: Upgraded.
-Sat Jun 26 20:18:14 BST 2010
-  This is the second and last update to the GNOME 2.30 series.  A number of
-  GNOME packages have been upgraded, some of which contain fixes for important
-  bugs, and many with documentation improvements and a large number of updated
-  translations. In addition to updated GNOME packages, in this round of
-  patches to GSB we have also included an upgraded and multilingual
-  OpenOffice, as well as better accessibility packages, and we have added a
-  new gitg package to the d/ set.
-patches/libgnomekbd-2.30.2-i486-1gsb.txz: Upgraded.
-patches/slapt-get-0.10.2e-i486-2gsb.txz: Rebuilt.
-  Added new OSUOSL mirrors to slapt-getrc.
-patches/gnome-settings-daemon-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gnome-session-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gnome-themes-2.30.2-i486-1gsb.txz: Upgraded.
-patches/evolution-2.30.2-i486-1gsb.txz: Upgraded.
-patches/evolution-exchange-2.30.2-i486-1gsb.txz: Upgraded.
-patches/vinagre-2.30.2-i486-1gsb.txz: Upgraded.
-patches/telepathy-glib-0.10.7-i486-1gsb.txz: Upgraded.
-patches/telepathy-mission-control-5.4.3-i486-1gsb.txz: Upgraded.
-patches/empathy-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gst-plugins-good-0.10.23-i486-1gsb.txz: Upgraded.
-patches/brasero-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gtksourceview-2.10.4-i486-1gsb.txz: Upgraded.
-patches/gedit-2.30.3-i486-1gsb.txz: Upgraded.
-patches/eog-2.30.2-i486-1gsb.txz: Upgraded.
-patches/evince-2.30.3-i486-1gsb.txz: Upgraded.
-patches/eog-plugins-2.30.1-i486-1gsb.txz: Upgraded.
-patches/file-roller-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gcalctool-5.30.2-i486-1gsb.txz: Upgraded.
-patches/gnome-terminal-2.30.2-i486-1gsb.txz: Upgraded.
-patches/bug-buddy-2.30.0-i486-2gsb.txz: Rebuilt.
-  Rebuilt against the newer evolution-data-server.
-patches/gnome-control-center-2.30.1-i486-3gsb.txz: Rebuilt.
- Rebuilt against the newer evolution-data-server.
-patches/gnome-python-desktop-2.30.2-i486-1gsb.txz: Upgraded.
-patches/libgda-4.0.9-i486-1gsb.txz: Upgraded.
-patches/mousetweaks-2.30.2-i486-1gsb.txz: Upgraded.
-patches/orca-2.30.2-i486-1gsb.txz: Upgraded.
-patches/hamster-applet-2.30.2-i486-1gsb.txz: Upgraded.
-patches/devhelp-2.30.1-i486-1gsb.txz: Upgraded.
-patches/anjuta-2.30.2.1-i486-1gsb.txz: Upgraded.
-patches/pessulus-2.30.2-i486-1gsb.txz: Upgraded.
-patches/gnome-games-2.30.2-i486-1gsb.txz: Upgraded.
-  Removed lightsoff and swell-foop from game list. They require seed, which in
-  turn requires two more library dependencies.  This is a bit much for two
-  small javascript games.  
-patches/libgee-0.5.1-i486-1gsb.txz: Upgraded.
-patches/banshee-1-1.6.1-i486-2gsb.txz: Patched.
-  If accessibility is enabled on gtk+2 >= 2.20, AlbumListView view doesn't
-  have a column and ColumnManager is null when BANSHEE_DISABLE_GRID is not
-  set, which causes banshee to crash in Gui.Accessibility.ListViewAccessible.
-  For more information, please see:
-    https://bugzilla.gnome.org/show_bug.cgi?id=615483
-patches/seahorse-plugins-2.30.1-i486-2gsb.txz: Patched.
-  Applied upstream patches to fix two crash conditions, one of which prevented
-  the seahorse-tool from using gpgme to encrypt/decrypt.  For more
-  information, please see:
-   https://bugzilla.gnome.org/show_bug.cgi?id=579738
-   https://bugzilla.gnome.org/show_bug.cgi?id=607423
-patches/gsb-desktop-2.30.1-i486-8gsb.txz: Repackaged.
-  Removed libgee from the slack-required.
-patches/nautilus-2.30.1-i486-4gsb.txz: Rebuilt.
-  Added the (missing) gconf key navigation_window_saved_geometry so that
-  nautilus will remember its window size and placement.
-patches/gnome-panel-2.30.0-i486-2gsb.txz: Rebuilt.
-  Added eggdbus to slack-required.
-patches/gnome-applets-2.30.0-i486-2gsb.txz: Reconfigured.
-  Added --enable-mixer-applet so that the 'deprecated' volume applet can still
-  be added to the gnome panel.  (The volti package in extra/ is nicer.)
-patches/gdm-2.20.11-i486-2gsb.txz: Rebuilt.
-  Add PM_SUSPEND to allow suspending from gdm using pm-utils.  Remember to
-  examine your new /etc/X11/gdm/custom.conf.  Thanks to rworkman for the
-  suggestion.
-patches/gnome-media-2.30.0-i486-2gsb.txz: Patched.
-  Set "NoDisplay=false" for the gstreamer-properties icon so that it displays
-  in the GNOME Control Panel.
-patches/gnome-python-desktop-2.30.2-i486-1gsb.txz: Upgraded.
-patches/libgda-4.0.9-i486-1gsb.txz: Upgraded.
-patches/boo-0.9.2.3383-i486-2gsb.txz: Rebuilt.
-  Removed an orphaned /share directory by forcing GTKSOURCEVIEW_PATH=/usr.
-patches/tracker-0.8.12-i486-1gsb.txz: Upgraded.
-ac/gail-1.22.3-i486-3gsb.txz: Upgraded.
-ac/libgail-gnome-1.20.3-i486-1gsb.txz: Upgraded.
-  gail and libgail-gnome have been added to improve accessibility with Orca.
-d/gitg-0.0.6-i486-1gsb.txz: Added.
-ooo/openoffice3-3.2.1.4-i486-1gsb.txz: Upgraded.
-  Now built with multilingual support.
-ooo/openoffice3-l10n-*-3.2.1.4-noarch-1gsb.txz: Added.
-  We now include 22 different language packages, each of which includes a
-  dictionary and locale interface language support.
+Sun Nov 27 15:41:43 GMT 2011
+extra/gst-plugins-ugly-0.10.18-i486-1gsb.txz: Upgraded.
+l/pygobject-2.28.6-i486-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.2-i486-1gsb.txz: Upgraded.
 +--------------------------+
-Thu Jun 10 19:02:49 BST 2010
-patches/empathy-2.30.1.1-i486-1gsb.txz: Upgraded.
-  This is an upstream stable release, which fixes some critical issues,
-  including crashes and a nasty bug which prevented multi-lines MSN messages
-  from being displayed when using Adium themes.
-  For more information, please see:
-    http://ftp.gnome.org/pub/gnome/sources/empathy/2.30/empathy-2.30.1.1.news
+Thu Nov 24 17:06:53 GMT 2011
+ac/at-spi2-core-2.2.3-i486-1gsb.txz: Upgraded.
+n/telepathy-logger-0.2.12-i486-1gsb.txz: Upgraded.
+ad/gconf-editor-3.0.1-i486-1gsb.txz: Upgraded.
+ap/eog-plugins-3.2.2-i486-1gsb.txz: Upgraded.
+n/papyon-0.5.6-i486-1gsb.txz: Upgraded.
+d/anjuta-3.2.2-i486-1gsb.txz: Upgraded.
 +--------------------------+
-Sun Jun  6 01:19:48 BST 2010
-GNOME SlackBuild 2.30 for x86 stable is released!
-Things are very stable.  A lot of weight has been trimmed in this release of
-GSB, and we now only needs to replace two Slackware packages.  The desktop is
-solid, responsive and polished and comes with a full set of great GNOME
-applications.  Please make sure to read CHANGES_AND_HINTS.TXT to see what has
-changed in this release, and for a few potential gotchas.  The next set of
-GNOME maintenance patches will be out in a few weeks.  For now, enjoy!
+Wed Nov 16 22:46:15 GMT 2011
+ap/seahorse-sharing-3.2.1-i486-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+l/colord-0.1.13-i486-2gsb.txz: Rebuilt.
+  Fixed incorrect location of xdg data.
+ac/orca-3.2.2-i486-1gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
+ac/caribou-0.4.1-i486-2gsb.txz: Upgraded.
+  Fixed incorrect location of xdg data.
++--------------------------+
+Wed Nov 16 19:54:18 GMT 2011
+ac/at-spi2-core-2.2.2-i486-1gsb.txz: Upgraded.
+ac/at-spi2-atk-2.2.2-i486-1gsb.txz: Upgraded.
+ap/file-roller-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gedit-3.2.3-i486-1gsb.txz: Upgraded.
+ap/gnome-user-docs-3.2.2-i486-1gsb.txz: Upgraded.
+go/tracker-0.12.6-i486-1gsb.txz: Upgraded.
+n/telepathy-gabble-0.12.7-i486-1gsb.txz: Upgraded.
+l/libevent-2.0.15-i486-1gsb.txz: Upgraded.
+n/transmission-2.42-i486-1gsb.txz: Upgraded.
+n/epiphany-extensions-3.2.0-i486-1gsb.txz: Upgraded.
+n/vino-3.2.2-i486-1gsb.txz: Upgraded.
+n/vinagre-3.2.2-i486-1gsb.txz: Upgraded.
+ad/slapt-get-0.10.2l-i486-1gsb.txz: Upgraded.
+n/balsa-2.4.10-i486-1gsb.txz: Upgraded.
+l/portaudio-v19_20110326-i486-1gsb.txz: Upgraded.
+ac/espeak-1.45.05-i486-1gsb.txz: Upgraded.
+ac/pyatspi-2.2.1-i486-1gsb.txz: Upgraded.
+ac/orca-3.2.2-i486-1gsb.txz: Upgraded.
+ac/mousetweaks-3.2.1-i486-1gsb.txz: Upgraded.
+ac/accerciser-3.2.1-i486-1gsb.txz: Upgraded.
+ac/caribou-0.4.1-i486-1gsb.txz: Upgraded.
+go/libgda-4.2.11-i486-1gsb.txz: Upgraded.
+d/gdl-3.2.0-i486-1gsb.txz: Upgraded.
+d/anjuta-3.2.1-i486-1gsb.txz: Upgraded.
+d/devhelp-3.2.0-i486-1gsb.txz: Upgraded.
+extra/gst-plugins-ugly-0.10.18-i486-1gsb.txz: Upgraded.
+extra/gnome-tweak-tool-3.2.1-i486-1gsb.txz: Upgraded.
++--------------------------+
+Mon Nov 14 18:14:45 GMT 2011
+l/glib2-2.30.2-i486-1gsb.txz: Upgraded.
+l/gtk+3-3.2.2-i486-1gsb.txz: Upgraded.
+l/libcroco-0.6.3-i486-1gsb.txz: Upgraded.
+a/libgnome-keyring-3.2.2-i486-1gsb.txz: Upgraded.
+l/librest-0.7.12-i486-1gsb.txz: Upgraded.
+a/evolution-data-server-3.2.2-i486-1gsb.txz: Upgraded.
+a/gnome-keyring-3.2.2-i486-1gsb.txz: Upgraded.
+n/NetworkManager-0.9.2.0-i486-1gsb.txz: Upgraded.
+n/NetworkManager-pptp-0.9.2.0-i486-1gsb.txz: Upgraded.
+ap/cheese-3.2.2-i486-2gsb.txz: Rebuilt.
+l/gtkhtml-4.2.2-i486-1gsb.txz: Upgraded.
+n/evolution-3.2.2-i486-1gsb.txz: Upgraded.
+n/empathy-3.2.2-i486-1gsb.txz: Upgraded.
+n/network-manager-applet-0.9.2.0-i486-1gsb.txz: Upgraded.
+ap/seahorse-3.2.2-i486-1gsb.txz: Upgraded.
+n/gtk-vnc-0.4.4-i486-2gsb.txz: Rebuilt.
+go/gnumeric-1.10.17-i486-1gsb.txz: Upgraded.
+t/gnome-themes-standard-3.2.1-i486-1gsb.txz: Upgraded.
+ap/eog-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gnome-games-3.2.1-i486-1gsb.txz: Upgraded.
+a/gnome-panel-3.2.1-i486-2gsb.txz: Rebuilt.
++--------------------------+
+Wed Nov 11 10:24:21 GMT 2011
+l/libicu-4.8.1-i486-1gsb.txz: Rebuilt.
+  Add --with-library-bits to configure.
++--------------------------+
+Wed Nov  9 22:41:32 GMT 2011
+a/gnome-settings-daemon-3.2.2-i486-1gsb.txz: Upgraded.
+l/libgee-0.6.3-i486-1gsb.txz: Upgraded.
+a/gnome-control-center-3.2.2-i486-1gsb.txz: Upgraded.
+ap/gnome-user-docs-3.2.1-i486-1gsb.txz: Upgraded.
+ap/yelp-3.2.1-i486-1gsb.txz: Upgraded.
+ap/gnome-utils-3.2.1-i486-1gsb.txz: Upgraded.
+ap/eog-plugins-3.2.1-i486-1gsb.txz: Upgraded.
+a/gsb-desktop-3.2.2-i486-1gsb.txz: Updated.
++--------------------------+
+Mon Nov  7 17:43:50 GMT 2011
+a/GConf-3.2.3-i486-1gsb.txz: Upgraded.
+l/json-glib-0.14.2-i486-1gsb.txz: Upgraded.
+a/libgweather-3.2.1-i486-1gsb.txz: Upgraded.
+l/librest-0.7.11-i486-1gsb.txz: Upgraded.
+l/clutter-gst-1.4.4-i486-1gsb.txz: Upgraded.
+d/pangomm-2.28.4-i486-1gsb.txz: Upgraded.
+d/atkmm-2.22.6-i486-1gsb.txz: Upgraded.
+n/empathy-3.2.1.2-i486-1gsb.txz: Upgraded.
++--------------------------+
+Mon Oct 24 00:01:03 BST 2011
+ap/seahorse-sharing-3.2.1-i486-1gsb.txz: Upgraded.
+ap/totem-pl-parser-2.32.6-i486-2gsb.txz: Rebuilt.
+ap/totem-3.2.1-i486-2gsb.txz: Rebuilt.
+go/zeitgeist-0.8.2-i486-1gsb.txz: Upgraded.
+go/libzeitgeist-0.3.12-i486-1gsb.txz: Upgraded.
+l/libatasmart-0.18-i486-1gsb.txz: Upgraded.
+l/sg3_utils-1.32-i486-1gsb.txz: Upgraded.
+a/udisks-1.0.4-i486-1gsb.txz: Upgraded.
+a/gnome-disk-utility-3.0.2-i486-1gsb.txz: Upgraded.
+a/gvfs-1.10.1-i486-1gsb.txz: Upgraded.
+n/nautilus-sendto-3.0.1-i486-1gsb.txz: Upgraded.
+n/gnome-bluetooth-3.2.1-i486-1gsb.txz: Upgraded.
+a/metacity-2.34.1-i486-1gsb.txz: Upgraded.
+a/gnome-panel-3.2.1-i486-1gsb.txz: Upgraded.
+l/json-glib-0.14.0-i486-1gsb.txz: Upgraded.
+l/startup-notification-0.12-i486-1gsb.txz: Upgraded.
+a/gnome-shell-3.2.1-i486-1gsb.txz: Upgraded.
+a/gnome-shell-extensions-3.2.0-i486-1gsb.txz: Upgraded.
+go/gnome-contacts-3.2.1-i486-1gsb.txz: Upgraded.
+l/gstreamer-0.10.35-i486-1gsb.txz: Upgraded.
+l/gst-plugins-base-0.10.35-i486-1gsb.txz: Upgraded.
+l/gst-plugins-good-0.10.30-i486-1gsb.txz: Upgraded.
++--------------------------+
+Sun Oct 23 23:30:32 BST 2011
+n/evolution-exchange-3.2.1-i486-1gsb.txz: Upgraded.
+n/evolution-groupwise-3.2.1-i486-1gsb.txz: Upgraded.
+n/evolution-groupwise-3.2.1-i486-1gsb.txz: Upgraded.
+n/folks-0.6.4.1-i486-1gsb.txz: Upgraded.
+n/telepathy-logger-0.2.10-i486-1gsb.txz: Upgraded.
+l/libnice-0.1.1-i486-1gsb.txz: Upgraded.
+n/empathy-3.2.1-i486-1gsb.txz: Upgraded.
+n/network-manager-applet-0.9.0-i486-1gsb.txz: Upgraded.
+n/mobile-broadband-provider-info-20110511-i486-1gsb.txz: Upgraded.
+n/ModemManager-0.5-i486-1gsb.txz: Upgraded.
+ap/seahorse-3.2.1-i486-1gsb.txz: Upgraded.
++--------------------------+
+Sat Oct 22 18:19:38 BST 2011
+t/gnome-icon-theme-3.2.1.1-i486-1gsb.txz: Upgraded.
+t/gnome-icon-theme-symbolic-3.2.1-i486-1gsb.txz: Upgraded.
+ac/at-spi2-core-2.2.1-i486-1gsb.txz: Upgraded.
+ac/at-spi2-atk-2.2.1-i486-1gsb.txz: Upgraded.
+a/upower-0.9.14-i486-1gsb.txz: Upgraded.
+a/accountsservice-0.6.14-i486-2gsb.txz: Rebuilt.
+  Enable introspection for gjs.
+a/gnome-session-3.2.1-i486-1gsb.txz: Upgraded.
+a/libgnomekbd-3.2.0-i486-1gsb.txz: Upgraded.
+l/notification-daemon-0.7.3-i486-1gsb.txz: Upgraded.
+a/gnome-settings-daemon-3.2.1-i486-1gsb.txz: Upgraded.
+l/libgtop-2.28.4-i486-1gsb.txz: Upgraded.
+a/nautilus-3.2.1-i486-1gsb.txz: Upgraded.
+l/libwnck3-3.2.1-i486-1gsb.txz: Upgraded.
+l/vte3-0.30.1-i486-1gsb.txz: Upgraded.
+ap/gnome-terminal-3.2.1-i486-1gsb.txz: Upgraded.
+l/p11-kit-0.7-i486-1gsb.txz: Added.
+a/gnome-keyring-3.2.1-i486-1gsb.txz: Upgraded.
+n/epiphany-3.2.1-i486-1gsb.txz: Upgraded.
+n/NetworkManager-0.9.0-i486-1gsb.txz: Upgraded.
+n/NetworkManager-pptp-0.9.0-i486-1gsb.txz: Upgraded.
+l/libgee-0.6.2.1-i486-1gsb.txz: Upgraded.
+l/clutter-gtk-1.0.2-i486-1gsb.txz: Upgraded.
+l/libpeas-1.2.0-i486-1gsb.txz: Upgraded.
+ap/eog-3.2.1-i486-1gsb.txz: Upgraded.
+l/mx-1.4.0-i486-1gsb.txz: Upgraded.
+a/gnome-control-center-3.2.1-i486-1gsb.txz: Upgraded.
+ap/cheese-3.2.1-i486-1gsb.txz: Upgraded.
+ap/gnome-power-manager-3.2.1-i486-1gsb.txz: Upgraded.
+t/gnome-backgrounds-3.2.0-i486-1gsb.txz: Upgraded.
+t/cantarell-fonts-0.0.7-i486-1gsb.txz: Upgraded.
+l/gtkhtml-4.2.1-i486-1gsb.txz: Upgraded.
+l/libpst-0.6.53-i486-1gsb.txz: Upgraded.
+ap/evince-3.2.1-i486-1gsb.txz: Upgraded.
+ap/file-roller-3.2.1-i486-1gsb.txz: Upgraded.
+d/libsigc++-2.2.10-i486-1gsb.txz: Upgraded.
+d/glibmm-2.30.0-i486-1gsb.txz: Upgraded.
+d/cairomm-1.10.0-i486-1gsb.txz: Upgraded.
+d/pangomm-2.28.3-i486-1gsb.txz: Upgraded.
+d/atkmm-2.22.5-i486-2gsb.txz: Upgraded.
+d/gtkmm-3.2.0-i486-1gsb.txz: Upgraded.
+ap/gnome-system-monitor-3.2.1-i486-1gsb.txz: Upgraded.
+l/libunique-3.0.2-i486-2gsb.txz: Rebuilt.
++--------------------------+
+Fri Oct 21 00:00:27 BST 2011
+l/heimdal-libraries-1.5.1-i486-1gsb.txz: Upgraded.
+l/liboauth-0.9.4-i486-1gsb.txz: Added.
+l/libgdata-0.9.1-i486-1gsb.txz: Upgraded.
+l/libnotify-0.7.4-i486-1gsb.txz: Upgraded.
+l/librest-0.7.10-i486-1gsb.txz: Upgraded.
+a/gnome-online-accounts-3.2.1-i486-1gsb.txz: Upgraded.
+a/evolution-data-server-3.2.1-i486-1gsb.txz: Upgraded.
+d/vala-0.14.0-i486-1gsb.txz: Upgraded.
++--------------------------+
+Thu Oct 12 22:14:39 BST 2011
+l/libffi-3.0.10-i486-1gsb.txz: Upgraded.
+l/glib2-2.30.1-i486-1gsb.txz: Upgraded.
+l/gobject-introspection-1.30.0-i486-1gsb.txz: Upgraded.
+  Unfortunately, a number of packages need to be replaced on a standard
+  Slackware system for in order to use GNOME 3.2.  These include some major
+  system packages.  As far as possible, the original Slackware build scripts
+  are used to create these packages in order to maintain compatibility.  For
+  more details, please see the SLACKWARE_REPLACED_PACKAGES.TXT.
+l/atk-2.2.0-i486-1gsb.txz: Added.
+l/gdk-pixbuf2-2.24.0-i486-1gsb.txz: Added.
+l/pango-1.29.4-i486-1gsb.txz: Added.
+l/lcms2-2.2-i486-1gsb.txz: Added.
+l/colord-0.1.13-i486-1gsb.txz: Added.
+l/gtk+3-3.2.1-i486-1gsb.txz: Upgraded.
+a/GConf-3.2.0-i486-1gsb.txz: Upgraded.
+l/json-c-0.9-i486-1gsb.txz: Added.
+l/json-glib-0.12.6-i486-1gsb.txz: Upgraded.
+a/pulseaudio-1.0-i486-1gsb.txz: Upgraded.
+l/cogl-1.8.2-i486-1gsb.txz: Added.
+l/clutter-1.8.2-i486-1gsb.txz: Upgraded.
+a/zenity-3.2.0-i486-1gsb.txz: Upgraded.
+a/mutter-3.2.1-i486-1gsb.txz: Upgraded.
+n/telepathy-glib-0.16.0-i486-1gsb.txz: Upgraded.
+a/gnome-menus-3.2.0-i486-1gsb.txz: Upgraded.
+a/gsettings-desktop-schemas-3.2.0-i486-1gsb.txz: Upgraded.
+a/gnome-desktop-3.2.1-i486-1gsb.txz: Upgraded.
+l/libproxy-0.4.7-i486-1gsb.txz: Upgraded.
+a/libgnome-keyring-3.2.0-i486-1gsb.txz: Upgraded.
+l/glib-networking-2.30.1-i486-1gsb.txz: Upgraded.
+l/libicu-4.8.1-i486-1gsb.txz: Upgraded.
+l/libsoup-2.36.1-i486-1gsb.txz: Upgraded.
+n/webkit-1.6.1-i486-1gsb.txz: Upgraded.
+a/libgweather-3.2.0-i486-1gsb.txz: Upgraded.
+ap/totem-pl-parser-2.32.6-i486-1gsb.txz: Upgraded.
+ap/totem-3.2.1-i486-1gsb.txz: Upgraded.
++--------------------------+
+Thu Oct 12 22:14:39 BST 2011
+  Development starts for GNOME 3.2.  Late, I know.  But better than never.
++--------------------------+
+Sat May 21 11:41:52 BST 2011
+n/gtk-vnc-0.4.3-i486-2gsb.txz: Rebuilt.
+  Linked against gtk+3 now.  Thanks to Giovanni De Francesco.
+n/vinagre-3.0.1-i486-2gsb.txz: Rebuilt.
+testing/rhythmbox-20110519-i486-1gsb.txz: Upgraded.
+  I have moved rhythmbox out of the main tree and into testing.  Lots of users
+  are reporting problems with the application.  Though the git version is
+  developed for the gnome-shell, there are still a number of bugs that need
+  fixing.  
++--------------------------+
+Thu May 19 21:20:53 BST 2011
+a/gnome-desktop-3.0.1-i486-1gsb.txz: Upgraded.
+a/dconf-0.7.5-i486-1gsb.txz: Upgraded.
+l/libnotify-0.7.3-i486-1gsb.txz: Upgraded.
+a/nautilus-3.0.1.1-i486-1gsb.txz: Upgraded.
+n/epiphany-3.0.3-i486-1gsb.txz: Upgraded.
+n/NetworkManager-0.8.999-i486-1gsb.txz: Upgraded.
+n/NetworkManager-pptp-0.8.999-i486-1gsb.txz: Upgraded.
+l/clutter-gst-1.3.10-i486-1gsb.txz: Upgraded.
+d/glibmm-2.28.1-i486-1gsb.txz: Upgraded.
+d/gtkmm-3.0.1-i486-1gsb.txz: Upgraded.
+n/farsight2-0.0.27-i486-1gsb.txz: Upgraded.
+n/network-manager-applet-0.8.999-i486-1gsb.txz: Upgraded.
+n/ModemManager-0.4.996-i486-1gsb.txz: Upgraded.
+go/zeitgeist-0.8.0-i486-1gsb.txz: Upgraded.
+d/vala-0.12.0-i486-2gsb.txz: Rebuilt.
+n/telepathy-glib-0.14.6-i486-1gsb.txz: Upgraded.
+n/empathy-3.0.1-i486-2gsb.txz: Rebuilt.
+go/tracker-0.10.14-i486-1gsb.txz: Upgraded.
+n/papyon-0.5.5-i486-1gsb.txz: Upgraded.
+n/vino-3.0.2-i486-1gsb.txz: Upgraded.
+ac/mousetweaks-3.0.1-i486-1gsb.txz: Upgraded.

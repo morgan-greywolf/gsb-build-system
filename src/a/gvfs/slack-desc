@@ -1,7 +1,14 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
     |-----handy-ruler------------------------------------------------------|
 gvfs: gvfs (GNOME Virtual Filespace)
 gvfs:
-gvfs: Gvfs is a userspace virtual filesystem designed to work with the i/o 
+gvfs: gvfs is a userspace virtual filesystem designed to work with the i/o 
 gvfs: abstractions of GIO in Glib2. This package has several modules that 
 gvfs: are automatically used by applications using libgio. This package
 gvfs: is used by Nautilus, for example.

@@ -1,5 +1,2 @@
-GConf
-libwnck
-libgtop
-glibmm
 gtkmm
+libwnck3

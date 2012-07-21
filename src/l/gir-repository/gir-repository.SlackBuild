@@ -1,0 +1,186 @@
+#!/bin/sh
+
+# Copyright (c) 2007-2011 Steve Kennedy <steve (at) gnomeslackbuild.org>
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+VERSION=1.30.0
+GIRVERSION=1.30.0
+BUILD=1
+
+TAG=${TAG:-gsb}
+ARCH=${ARCH:-i486}
+DISTRO=${DISTRO:-slackware}
+TMP=${TMP:-/tmp}
+PKGDEST=${PKGDEST:-$TMP}
+PKGNAM=gir-repository
+PKG=$TMP/package-$PKGNAM
+CWD=$(pwd)
+
+# Source dir
+SRCDIR=$(cd $(dirname $0); pwd)
+# Packages to generate GIRs from
+SRCNAME[0]="gdk-pixbuf"
+SRCVERSION[0]="2.23.3"
+SRCURL[0]="ftp://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.23/gdk-pixbuf-${SRCVERSION[0]}.tar.bz2"
+MD5SUM[0]="5d50c5311b4ce460d33983938d92109e"
+SOURCE[0]="${SRCDIR}/${SRCNAME[0]}-${SRCVERSION[0]}.tar.bz2"
+OPTIONS[0]=""
+SRCNAME[1]="pango"
+SRCVERSION[1]="1.28.3"
+SRCURL[1]="ftp://ftp.gnome.org/pub/gnome/sources/pango/1.28/pango-${SRCVERSION[1]}.tar.bz2"
+MD5SUM[1]="caa74baea47e7e16bc73c89f9089d522"
+SOURCE[1]="${SRCDIR}/${SRCNAME[1]}-${SRCVERSION[1]}.tar.bz2"
+OPTIONS[1]=""
+SRCNAME[2]="polkit"
+SRCVERSION[2]="0.101"
+SRCURL[2]="http://hal.freedesktop.org/releases/polkit-${SRCVERSION[2]}.tar.gz"
+MD5SUM[2]="f925ac93aba3c072977370c1e27feb7f"
+SOURCE[2]="${SRCDIR}/${SRCNAME[2]}-${SRCVERSION[2]}.tar.gz"
+OPTIONS[2]="--with-authfw=shadow --enable-verbose-mode --with-os-type=Slackware"
+SRCNAME[3]="gstreamer"
+SRCVERSION[3]="0.10.35"
+SRCURL[3]="http://gstreamer.freedesktop.org/src/gstreamer/gstreamer-${SRCVERSION[3]}.tar.bz2"
+MD5SUM[3]="442bc3d37b8511a73379143e7531d726"
+SOURCE[3]="${SRCDIR}/${SRCNAME[3]}-${SRCVERSION[3]}.tar.gz"
+OPTIONS[3]="--disable-debug --disable-gst-debug"
+SRCNAME[4]="gtk+"
+SRCVERSION[4]="2.24.4"
+SRCURL[4]="ftp://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-${SRCVERSION[4]}.tar.bz2"
+MD5SUM[4]="e05a700ba79c8813d56e83e80636ee21"
+SOURCE[4]="${SRCDIR}/${SRCNAME[4]}-${SRCVERSION[4]}.tar.gz"
+OPTIONS[4]="--enable-introspection"
+
+mkdir -p $TMP
+rm -rf $PKG
+mkdir -p $PKG
+mkdir -p $PKGDEST
+mkdir -p $TMP/${SRCNAME[$i]}
+
+if [ "$ARCH" = "i486" ]; then
+  GSBCFLAGS=${GSBCFLAGS:-"-O2 -march=i486 -mtune=i686"}
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "s390" ]; then
+  GSBCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  GSBCFLAGS=${GSBCFLAGS:-"-O2 -fPIC"}
+  LIBDIRSUFFIX="64"
+else
+  GSBCFLAGS=${GSBCFLAGS:-"-O2"}
+  LIBDIRSUFFIX=""
+fi
+
+for (( i = 0; i < ${#SOURCE[*]}; i++ )) ; do
+  # Download sources
+  if ! [ -f ${SOURCE[$i]} ]; then
+      wget -c -4 -T 20 -O "${SOURCE[$i]}" "${SRCURL[$i]}" || exit 1
+  fi;
+  echo "${MD5SUM[$i]}  ${SOURCE[$i]}" > $TMP/md5sum.${i}.$$
+  DOWNLOAD_ATTEMPT=0; VALID_MD5=0
+  until [ $DOWNLOAD_ATTEMPT -eq 3 -o $VALID_MD5 -eq 1 ]; do
+    # MD5SUM Comparison
+    if [ -f ${SOURCE[$i]} ]; then
+       md5sum -c $TMP/md5sum.${i}.$$ 2>/dev/null 1>/dev/null && VALID_MD5=1;
+    fi;
+    if [ "${VALID_MD5}" = "0" ]; then
+       # Download the source file
+      wget -c -4 -T 20 -O "${SOURCE[$i]}" "${SRCURL[$i]}" || {
+         echo ; echo "* Error: Failed to complete download."
+	 exit 1
+       }
+    fi
+    DOWNLOAD_ATTEMPT=$[$DOWNLOAD_ATTEMPT+1];
+    done;
+    rm -fr $TMP/md5sum.${i}.$$
+
+    if [ ! -f "${SOURCE[$i]}" -o ! -s "${SOURCE[$i]}" -o $VALID_MD5 -eq 0 ]; then
+      echo "File '$(basename ${SOURCE[$i]})' not available. Aborting the build."
+      exit 1
+    fi
+
+  cd $TMP &&
+  rm -rf ${SRCNAME[$i]}-${SRCVERSION[$i]} &&
+  tar xvf ${SOURCE[$i]} &&
+  cd ${SRCNAME[$i]}-${SRCVERSION[$i]} || exit 1
+
+  # Customise builds
+  case "${SRCNAME[$i]}" in
+	"gtk+") 
+	# Fix build errors
+	zcat $CWD/fix_build_issues_on_tutorial_and_faq.diff.gz | patch -p1 --verbose || exit 1
+	# Do not flood the console or .xsession-errors with "trouble ahead"
+	# warnings (most noticable when using Firefox and Flash):
+	zcat $CWD/gtk.xid.nowarningflood.diff.gz | patch -p1 --verbose || exit 1
+	# Use /etc/gtk-2.0/$ARCH-slackware-linux instead of /etc/gtk-2.0/ for gtk.immodules
+	zcat $CWD/use_host_triplet_for_gtk_immodules.diff.gz | patch -p1 --verbose || exit 1
+	# Patch to restore commonly used icon names, otherwise everything breaks.
+	# I fail to see the point of this "cleanup"
+	zcat $CWD/gtk+-2.24.x.icon-compat.diff.gz | patch -p1 --verbose || exit 1
+	zcat $CWD/gtk+-2.24.x.icon-compat.am.diff.gz | patch -p1 --verbose || exit 1
+	# Regenerate ./configure:
+	libtoolize --force
+	autoreconf -vif
+	# Autoconf changes linux to linux-gnu.
+	# Our host is $ARCH-slackware-linux not $ARCH-slackware-linux-gnu:
+	sed -i -e 's#linux|linux-gnu|#linux|linux|#' config.sub
+	;;
+  esac
+
+  chown -R root:root .
+  find . \
+    \( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+    -exec chmod 755 {} \; -o \
+    \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+    -exec chmod 644 {} \;
+
+
+
+CFLAGS="$GSBCFLAGS" \
+./configure --prefix=/usr \
+   --sysconfdir=/etc \
+   --mandir=/usr/man \
+   --libdir=/usr/lib${LIBDIRSUFFIX} \
+   --disable-static \
+   --enable-introspection=yes \
+   ${OPTIONS[$i]} \
+    || exit 1
+
+make $NUMJOBS || make || exit 1
+make DESTDIR=$TMP/${SRCNAME[$i]} install || exit 1
+cd $TMP/${SRCNAME[$i]} || exit 1
+tar cf - --remove-files \
+$(find . -depth -type f -name "*.gir" \
+    -o -type f -name "*typelib" ) \
+  | ( cd ${PKG} ; tar xf - ) || exit 1
+rm -fr $TMP/${SRCNAME[$i]}
+# Spam build machine for building gdk and gtk+ GIR
+cp -r ${PKG}/usr/* /usr 
+done;
+
+mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cp -a $CWD/README.gir-repository \
+  $PKG/usr/doc/$PKGNAM-$VERSION
+find $PKG/usr/doc/$PKGNAM-$VERSION/ -type f -exec chmod 644 {} \;
+chown -R root:root $PKG/usr/doc/$PKGNAM-$VERSION
+
+mkdir -p $PKG/install 
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG ; makepkg -p -l y -c n $PKGDEST/${PKGNAM}-${VERSION}-$ARCH-${BUILD}${TAG}.txz || exit 1

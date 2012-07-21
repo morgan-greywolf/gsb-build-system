@@ -1,5 +1,3 @@
-glib2
-gnutls
-net-snmp
-libgnome-keyring
 libproxy
+libgnome-keyring
+glib-networking

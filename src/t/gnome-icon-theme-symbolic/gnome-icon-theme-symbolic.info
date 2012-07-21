@@ -1,0 +1,8 @@
+PKGNAME="gnome-icon-theme-symbolic"
+VERSION="3.2.2"
+HOMEPAGE="http://www.gnome.org"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/gnome-icon-theme-symbolic/3.2/gnome-icon-theme-symbolic-${VERSION}.tar.xz"
+MD5SUM="5b04481977f47e356360b3851b8c2125"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

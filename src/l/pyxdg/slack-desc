@@ -1,3 +1,4 @@
+
 # HOW TO EDIT THIS FILE:
 # The "handy ruler" below makes it easier to edit a package description.  Line
 # up the first '|' above the ':' following the base package name, and the '|' on
@@ -6,9 +7,9 @@
 # leave one space after the ':'.
 
      |-----handy-ruler------------------------------------------------------|
-pyxdg: pyxdg (python bindings for freedesktop.org)
+pyxdg: pyxdg (Python Bindings for freedesktop.org Standards)
 pyxdg:
-pyxdg: pyxdg is a python library to access freedesktop.org standards. 
+pyxdg: PyXDG is a python library to access freedesktop.org standards. 
 pyxdg: Currently supported specifications are Base Directory, Menu, Desktop 
 pyxdg: Entry, Icon Themes, Recent File, and Shared MIME Database.
 pyxdg:

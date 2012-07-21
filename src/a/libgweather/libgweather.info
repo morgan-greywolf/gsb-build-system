@@ -1,8 +1,8 @@
 PKGNAME="libgweather"
-VERSION="2.30.3"
+VERSION="3.2.1"
 HOMEPAGE="http://www.gnome.org"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/libgweather/2.30/libgweather-2.30.3.tar.bz2"
-MD5SUM="bf6a0a05051341ecb250f332e3edfb88"
+DOWNLOAD="${GNOME_SERVER}/libgweather/3.2/libgweather-${VERSION}.tar.xz"
+MD5SUM="de91f7ed59508d2b96c319e19e27fda5"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

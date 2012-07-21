@@ -1,8 +1,8 @@
 PKGNAME="vino"
-VERSION="2.32.1"
+VERSION="3.2.2"
 HOMEPAGE="http://www.gnome.org"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/vino/2.32/vino-2.32.1.tar.bz2"
-MD5SUM="136af49e142adc1d6df0bfe3374e203e"
+DOWNLOAD="${GNOME_SERVER}/vino/3.2/vino-${VERSION}.tar.xz"
+MD5SUM="ed9e47261f352b04738e644ecc5301fb"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

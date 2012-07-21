@@ -1,0 +1,8 @@
+PKGNAME="caribou"
+VERSION="0.4.1"
+HOMEPAGE="http://live.gnome.org/Caribou"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/caribou/0.4/caribou-${VERSION}.tar.xz"
+MD5SUM="c03cb3e121547222e9c4fe7bf527fee0"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

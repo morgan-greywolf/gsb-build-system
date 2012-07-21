@@ -1,8 +1,4 @@
-python
-gail
-libgail-gnome
-gnome-mag
 speech-dispatcher
-pyorbit
-pygtk
 pyxdg
+pyatspi
+liblouis

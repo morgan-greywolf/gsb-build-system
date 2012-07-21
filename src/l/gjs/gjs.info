@@ -1,0 +1,8 @@
+PKGNAME="gjs"
+VERSION="1.30.1"
+HOMEPAGE="http://live.gnome.org/Gjs/"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/gjs/1.30/gjs-${VERSION}.tar.xz"
+MD5SUM="7f8842aea298a033f0c8d725278e1e50"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

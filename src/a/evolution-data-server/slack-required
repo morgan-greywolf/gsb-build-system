@@ -1,6 +1,10 @@
+GConf
 libsoup
-seamonkey-solibs
-gnome-keyring
-heimdal-libraries
+libgnome-keyring
 libgdata
 libgweather
+seamonkey-solibs
+heimdal-libraries
+json-glib
+liboauth
+gnome-online-accounts

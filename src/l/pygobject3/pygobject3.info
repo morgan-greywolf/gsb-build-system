@@ -1,0 +1,8 @@
+PKGNAME="pygobject"
+VERSION="3.0.3"
+HOMEPAGE="http://www.gnome.org"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/pygobject/3.0/pygobject-${VERSION}.tar.xz"
+MD5SUM="d17e2565e139d647e8ee50fd1126aa9e"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

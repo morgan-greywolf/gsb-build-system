@@ -1,8 +1,8 @@
 PKGNAME="libunique"
-VERSION="1.1.6"
-HOMEPAGE="http://live.gnome.org/LibUnique"
+VERSION="3.0.2"
+HOMEPAGE="http://www.gnome.org"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/libunique/1.1/libunique-1.1.6.tar.bz2"
-MD5SUM="7955769ef31f1bc4f83446dbb3625e6d"
+DOWNLOAD="${GNOME_SERVER}/libunique/3.0/libunique-${VERSION}.tar.xz"
+MD5SUM="a52dfbd0fee80f645b74227ade4f01ee"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

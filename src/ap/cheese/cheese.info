@@ -1,8 +1,8 @@
 PKGNAME="cheese"
-VERSION="2.32.0"
+VERSION="3.2.2"
 HOMEPAGE="http://projects.gnome.org/cheese/"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/cheese/2.32/cheese-${VERSION}.tar.bz2"
-MD5SUM="e3b822e46b2558d0bbdfa4809d5d3c24"
+DOWNLOAD="${GNOME_SERVER}/cheese/3.2/cheese-${VERSION}.tar.xz"
+MD5SUM="a674bbe235cc960e578bb71b6aa55783"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

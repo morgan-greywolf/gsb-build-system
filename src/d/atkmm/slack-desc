@@ -6,10 +6,10 @@
 # leave one space after the ':'.
 
       |-----handy-ruler------------------------------------------------------|
-atkmm: atkmm (C++ bindings for accessibility toolkit)
+atkmm: atkmm (C++ Bindings for Acessibility tooklit)
 atkmm: 
-atkmm: atkmm is a set of C++ bindings for the  atk accessibility library that 
-atkmm: is used by the GTK+-2 toolkit.
+atkmm: atkmm is the C++ binding for the ATK library.
+atkmm: 
 atkmm: 
 atkmm: 
 atkmm: 

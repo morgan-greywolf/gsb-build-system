@@ -1,7 +1,14 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
               |-----handy-ruler------------------------------------------------------|
-telepathy-glib: telepathy-glib (Telepathy Connection Manager Library)
+telepathy-glib: telepathy-glib (Telepathy connection manager library)
 telepathy-glib: 
-telepathy-glib: Telepathy GLib is a library for connection managers. It aims to 
+telepathy-glib: telepathy-glib is a library for connection managers. It aims to 
 telepathy-glib: factor out code in common to GLib-based connection managers such 
 telepathy-glib: as Gabble, Idle, Sofia-Sip and Salut.
 telepathy-glib: 

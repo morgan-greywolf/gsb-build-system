@@ -1,0 +1,7 @@
+PKGNAME="alsa-plugins"
+VERSION="1.0.24"
+HOMEPAGE="www.alsa-project.org"
+DOWNLOAD="ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-1.0.24.tar.bz2"
+MD5SUM="e4d4c90e11ab9d1a117afbbc1edd2b16"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

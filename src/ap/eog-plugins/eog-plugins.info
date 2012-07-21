@@ -1,8 +1,8 @@
 PKGNAME="eog-plugins"
-VERSION="2.30.2"
+VERSION="3.2.2"
 HOMEPAGE="http://projects.gnome.org/eog/"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/eog-plugins/2.30/eog-plugins-${VERSION}.tar.bz2"
-MD5SUM="ef8179695ddc61b25c0b49c33da5a10f"
+DOWNLOAD="${GNOME_SERVER}/eog-plugins/3.2/eog-plugins-${VERSION}.tar.xz"
+MD5SUM="131ae5c330ee45418529767239cf92ce"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

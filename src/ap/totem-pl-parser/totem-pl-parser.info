@@ -1,8 +1,8 @@
 PKGNAME="totem-pl-parser"
-VERSION="2.32.3"
+VERSION="2.32.6"
 HOMEPAGE="http://projects.gnome.org/totem"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/totem-pl-parser/2.32/totem-pl-parser-2.32.3.tar.bz2"
-MD5SUM="ff934dc35a90689cf4d25bf5c7c23c2e"
+DOWNLOAD="${GNOME_SERVER}/totem-pl-parser/2.32/totem-pl-parser-${VERSION}.tar.xz"
+MD5SUM="ee1fe94d2cd09c26bf9fef55d858d365"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

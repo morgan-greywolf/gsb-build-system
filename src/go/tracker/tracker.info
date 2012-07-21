@@ -1,8 +1,8 @@
 PKGNAME="tracker"
-VERSION="0.8.17"
+VERSION="0.12.8"
 HOMEPAGE="http://projects.gnome.org/tracker"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/tracker/0.8/tracker-${VERSION}.tar.bz2"
-MD5SUM="503117377b228e4575105c6b4ce34eaa"
+DOWNLOAD="${GNOME_SERVER}/tracker/0.12/tracker-${VERSION}.tar.xz"
+MD5SUM="4259ddf9332b1419cbdad1f3e94ab8eb"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

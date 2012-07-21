@@ -1,8 +1,12 @@
 PKGNAME="yelp"
-VERSION="2.30.1"
+VERSION="3.2.1"
 HOMEPAGE="http://www.gnome.org"
 GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
-DOWNLOAD="${GNOME_SERVER}/yelp/2.30/yelp-$VERSION.tar.bz2"
-MD5SUM="afd638cdaea1fcb9821ece88b819a022"
+DOWNLOAD="${GNOME_SERVER}/yelp/3.2/yelp-$VERSION.tar.xz \
+          ${GNOME_SERVER}/yelp-xsl/3.2/yelp-xsl-3.2.1.tar.xz \
+          ${GNOME_SERVER}/yelp-tools/3.2/yelp-tools-3.2.1.tar.xz"
+MD5SUM="0c58fefce818ed3f2c2cdcf0d636b892 \
+060e53dc346d5f3f879cef12d81aaf93 \
+b4517f31033080254ed4ac6cd77df51a"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

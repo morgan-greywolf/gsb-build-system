@@ -1,0 +1,8 @@
+PKGNAME="mutter"
+VERSION="3.2.2"
+HOMEPAGE="http://live.gnome.org/GnomeShell"
+GNOME_SERVER=${GNOME_SERVER:-ftp://ftp.gnome.org/pub/GNOME/sources}
+DOWNLOAD="${GNOME_SERVER}/mutter/3.2/mutter-${VERSION}.tar.xz"
+MD5SUM="e367c4a08950953e793ce5c625b2c419"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"

@@ -1,0 +1,5 @@
+PKGNAME="gir-repository"
+VERSION="0.10.3"
+HOMEPAGE="http://www.gnomeslackbuild.org"
+MAINTAINER="Steve Kennedy"
+EMAIL="steve@gnomeslackbuild.org"
