@@ -87,7 +87,8 @@ CFLAGS="$GSBCFLAGS" \
   || exit 1
 
 make ${NUMJOBS} || make || exit 1
-make check && make DESTDIR=$PKG install || exit 1
+# make check && \
+make DESTDIR=$PKG install || exit 1
 
 # Keep autostarts separate
 mkdir -p $PKG/etc/gnome $PKG/etc/kde/autostart &&

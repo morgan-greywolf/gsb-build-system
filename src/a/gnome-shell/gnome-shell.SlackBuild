@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e 
 
 # Copyright (c) 2007-2011 Steve Kennedy <steve (at) gnomeslackbuild.org>
 # All rights reserved.
@@ -56,12 +56,12 @@ else
   GSBCFLAGS=${GSBCFLAGS:-"-O2"}
   LIBDIRSUFFIX=""
 fi
-
+GSBCFLAGS="${GSBCFLAGS} -Wno-error=deprecated-declarations -Wno-error=switch" 
 rm -rf $PKG
 mkdir -p $TMP $PKGDEST
-cd $TMP &&
-rm -rf $PKGNAM-$VERSION &&
-tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
+cd $TMP 
+rm -rf $PKGNAM-$VERSION 
+tar xvf $CWD/$PKGNAM-$VERSION.tar.?z*
 cd $PKGNAM-$VERSION || exit 1
 
 chown -R root:root .

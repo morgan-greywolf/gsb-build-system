@@ -11,16 +11,16 @@
 # START BUILDLIST
 #
 # install gobject-introspection and repository
-l/libffi
-l/glib2
-l/gobject-introspection
-l/atk
-l/gdk-pixbuf2
+# l/libffi
+# l/glib2
+# l/gobject-introspection
+# l/atk
+# l/gdk-pixbuf2
 # gtk+3 can live beside gtk+2 safely
-l/pango
-l/lcms2
+#l/pango
+#l/lcms2
 l/colord
-l/gtk+3
+#l/gtk+3
 # audio dependencies
 l/speex
 l/libdaemon
@@ -48,6 +48,7 @@ a/libgnome-keyring
 l/glib-networking
 l/libicu
 l/libsoup
+# l/geoclue
 n/webkit
 a/libgweather
 l/heimdal-libraries
@@ -87,7 +88,7 @@ l/libtasn1
 l/p11-kit
 a/gnome-keyring
 n/epiphany
-n/NetworkManager
+# n/NetworkManager
 n/pptp
 n/NetworkManager-pptp
 l/clutter-gst
@@ -182,7 +183,7 @@ l/pycrypto
 n/papyon
 n/telepathy-butterfly
 n/telepathy-gabble
-n/telepathy-salut
+# n/telepathy-salut
 # Networking applications
 l/libevent
 n/transmission

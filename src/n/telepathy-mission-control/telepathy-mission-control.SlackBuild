@@ -62,7 +62,8 @@ mkdir -p $TMP $PKGDEST
 cd $TMP &&
 rm -rf $PKGNAM-$VERSION &&
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
-cd $PKGNAM-$VERSION || exit 1
+cd $PKGNAM-$VERSION && 
+patch -p1 <$CWD/pedantic_glib.patch || exit 1
 
 chown -R root:root .
 find . \

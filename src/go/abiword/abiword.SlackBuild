@@ -62,6 +62,8 @@ mkdir -p $TMP $PKGDEST
 cd $TMP &&
 rm -rf $PKGNAM-$VERSION &&
 tar xvf $CWD/$PKGNAM-$VERSION.tar.?z* &&
+patch -p0 <$CWD/$PKGNAM-$VERSION-pedantic-glib.patch &&
+patch -p0 <$CWD/$PKGNAM-$VERSION-remove-no-undefined.patch &&
 cd $PKGNAM-$VERSION || exit 1
 
 zcat $CWD/url_show.patch.gz | patch -p1 || exit 1

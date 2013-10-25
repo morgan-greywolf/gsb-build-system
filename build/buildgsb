@@ -1,4 +1,4 @@
-#!/bin/bash
+
 # Version: 1.9.3 GNOME SlackBuild Build Script
 # Copyright (c) 2007, 2008, 2009
 #   Darren 'Tadgy' Austin <darren (at) gnomeslackbuild.org>, Coventry, UK.
@@ -105,8 +105,7 @@ PUBLISH=0
 
 # Download settings
 DOWNLOAD_ATTEMPTS=${DOWNLOAD_ATTEMPTS:-3}
-WGET_OPTIONS="-4"
-
+WGET_OPTIONS="-4" 
 #========================================================================
 # COMMAND LINE PARSING 
 #
@@ -444,7 +443,7 @@ if [ "$PUBLISH" = "1" -a "${ONLY_DOWNLOAD}" = "0" ]; then
 	  echo "No .txt found for $CHK_PACKAGE." && exit 1 ;
   fi;
   if [ -f ${CHK_PACKAGE}.asc ]; then
-    gpg --verify ${CHK_PACKAGE}.asc ${CHK_PACKAGE} 1>/dev/null 2>/dev/null || {
+    gpg --verify ${CHK_PACKAGE}.asc ${CHK_PACKAGE} --batch --passphrase-file ~/.passf 1>/dev/null 2>/dev/null || {
       echo ;echo ; header "$CHK_PACKAGE failed to pass asc verification."
       echo "Has the package been corrupted?" ;
       exit 1

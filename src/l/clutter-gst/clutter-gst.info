@@ -1,7 +1,7 @@
 PKGNAME="clutter-gst"
 VERSION="1.4.6"
 HOMEPAGE="http://www.clutter-project.org/"
-DOWNLOAD="http://source.clutter-project.org/sources/clutter-gst/1.4/clutter-gst-${VERSION}.tar.xz"
+DOWNLOAD="http://ftp.acc.umu.se/pub/GNOME/sources/clutter-gst/1.4/clutter-gst-${VERSION}.tar.xz"
 MD5SUM="998e44b838fdef5d3c6370e99546225d"
 MAINTAINER="Steve Kennedy"
 EMAIL="steve@gnomeslackbuild.org"

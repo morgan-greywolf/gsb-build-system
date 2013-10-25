@@ -56,7 +56,8 @@ else
   GSBCFLAGS=${GSBCFLAGS:-"-O2"}
   LIBDIRSUFFIX=""
 fi
-
+# because the mutter developers are morons.
+GSBCFLAGS="${GSBCFLAGS} -Wno-error=deprecated-declarations -Wno-error=switch" 
 rm -rf $PKG
 mkdir -p $TMP $PKGDEST
 cd $TMP &&

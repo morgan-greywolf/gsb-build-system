@@ -103,7 +103,9 @@ for (( i = 0; i < ${#SOURCE[*]}; i++ )) ; do
   cd $TMP &&
   rm -rf $PKGNAM-${SRCVERSION[$i]} &&
   tar xvf ${SOURCE[$i]} &&
-  cd $PKGNAM-${SRCVERSION[$i]} || exit 1
+  cd $PKGNAM-${SRCVERSION[$i]} &&
+  patch -p1 <$CWD/pedantic_glib.patch # one patch to rule them all!  ||
+  exit 1
 
   chown -R root:root .
   find . \

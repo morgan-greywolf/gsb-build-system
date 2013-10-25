@@ -3,8 +3,13 @@
 # Functions library :: for the GNOME SlackBuild build script
 # <http://www.gnomeslackbuild.org>
 
+#  use agent
+# alias gpg='gpg2 --batch --passphrase-file=/root/.passf'
+
 # echogreen will echo $@ in green color
 # $1 = text
+
+
 echogreen()
 {
    echo -ne "[0;32m""$@""[0;39m"
@@ -57,7 +62,7 @@ function make_pkg_txt() {
 function make_pkg_asc() {
   # $1 = Package file to process [required].
   [ -z "$1" ] || [ ! -e "$1" ] && return 1
-  ( cd $( dirname $1 ) && gpg -b -a $( basename $1 ) )
+  ( cd $( dirname $1 ) && gpg2 --batch --passphrase-file=/root/.passf -b -a $( basename $1 ) )
   return $?
 }
 
